@@ -1,0 +1,129 @@
+
+note---> No need to write command in uppercase (but still we write commands in uppercase and name in lower). MySql is not case senstive.
+
+we have Mysql workbench and Mysql command line.
+In workbench most of thing could be done using cursor.
+in both lets choose command line and we write following command
+
+============================To show all databases============================
+ 	
+	show databases;
+
+===========================Create database===============================
+	
+	CREATE DATABASE <database_name>
+	eg. CREATE DATABASE soap_store;(we can't write soap store, there should be no space between variables_name)
+
+==========================To delete/drop database============================
+	
+	DROP DATABSE <database_name>;
+	eg. DROP DATABASE soap_store;
+
+=========================How to use a specific database===============================
+
+Now we can create and delete database now time to use database
+if want to do operation one any one databse we need to first tell my sql to which 	database i wanna work.for this we uses "use"command
+
+	USE <database name>;
+	eg. USE chicken_coop;
+
+Now we can create new tables or delete the created one or run a legal query.
+
+==============================select database============================================
+
+How we gonna know which database we working on currently.we use "select"command
+
+	SELECT database();
+	it will print the name of database we are currently working on.
+
+===================data type=========================================
+
+Numeric types 				String Types      			Date Types
+
+INT						CHAR						DATE
+SMALLINT					VARCHAR					DATETIME
+TINYINT					BINARY					TIMESTAMP
+MEDIUMINT					VARBINARY					TIME
+BIGINT					BLOB						YEAR
+DECIMAL					TINYBLOB
+NUMERIC					MEDIUMBLOB
+FLOAT						LONGBLOB
+DOUBLE					TEXT
+BIT						TINYTEXT
+						MIDIUMTEXT
+						LONGTEXT
+						ENUM
+
+	INT (max value possible is +/- 214748367(9 digit)).
+	VARCHAR (100 char possible to store by default).
+--If we write VARCHAR(15)--> it's mean that max 15 char store in that column.
+--We can also write VARCHAR(140)--> it's mean max 140 char possible to store in that column.
+
+============================================Create Tables==========================
+
+
+	CREATE TABLE <table_name>
+	(
+		column_name	data_type,
+		column_name data_type
+	);
+
+	eg.
+	CREATE TABLE cats
+	(
+		name VARCHAR(100),
+		age INT
+	);
+
+#================================Comment in Mysql=================================
+
+	--MySQL Server supports three comment styles:
+
+	1.	# This comment continues to the end of line
+	2.	-- This comment continues to the end of line
+	3.	/* this is an in-line comment */ + 1;
+	3.	/*
+		this is a
+		multiple-line comment
+		*/
+Note---->	you can write your command in single or in multipe line but the sql identify end of the command only by semicolon(;).
+
+=============================NOT NULL=============================================
+
+At time of table creation by default all column could have NULL value if not assigned any.
+But when we use not null we need to assign value to that attribute
+
+CREATE TABLE <table_name>
+	(
+		column_name	data_type NOT NULL,
+		column_name data_type NOT NULL
+	);
+
+	eg.
+	CREATE TABLE cats
+	(
+		name VARCHAR(100) NOT NULL,
+		age INT NOT NULL
+	);
+=============================show tables===========================================
+
+after entering into a specific database we can use this command 
+
+	SHOW TABLES;
+		-> to see all the tables in that specific database.
+
+	SHOW COLUMNS FROM <table_name>;
+		-> to see all column names and its data type.
+
+	DESC table_name; OR DESCRIBE <table_name>;
+		-> to get everything about that table.likes its column_name and its data type.
+
+===========================Delete table============================================
+
+	DROP TABLE <table_name>;
+	eg. DROP TABLE cats;
+		-> it will delete the table from a specific database.
+
+
+============================END(of first page)===========================================
+	
