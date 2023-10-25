@@ -110,10 +110,10 @@ initially when you install git you need to set or config. name and email of user
 
 	// To push your local project on github we need to write following code in terminal
 	// 1.git remote -v
-	// 2.git remote add origin https//.....
+	// 2.git remote add origin URL(https//.....)
 	// 3.
 	// 4.
-	// command of 2,3,4 you will get on github.
+	// command of 2,3,4 you will get on github when you create new repo on git, there will option for it.
 
 18.=========================== push pull =======================================
 
