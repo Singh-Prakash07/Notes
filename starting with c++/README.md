@@ -28,7 +28,7 @@
   - c++ adopts **object-oriented** programming.
       - OOPs is a programming approach which revolves around the concept of **object**.
       - that can be defined as a set of properties and set of operations performed using entity's property set, is known as object.
-# Concept of Classes and Object
+## Concept of Classes and Object
   - class is blueprint of an object.
   - class is description of object's property set and set of operations.
   - creating class is as good as defining a new data type
@@ -39,4 +39,21 @@
 # Software development in c/c++
 ![image](https://github.com/user-attachments/assets/dcf3628a-474b-49f2-84b6-e59024c97928)
 
-
+## Identifier in c++
+  - constant
+      - any information is constant.
+      - data = information = constant
+    - type of constant
+        - primary
+            - integer (23, -34, 0, etc)
+            - real (3.4, -0.06, etc)
+            - character ('a', '4', '-', '&', etc)
+        - secondary
+            - created from primary identifiers
+            - array, string, pointer, union, structure, enumerator, class
+  - variables
+      - variables are the name of memory locations where we store data.
+      - variables name is any combination of alphabet (a to z or A to Z), digit(0 to 9) and underscore(_).
+      - valid variable cannot start with digit.
+  - keywords
+    
