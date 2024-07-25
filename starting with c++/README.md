@@ -56,12 +56,35 @@
       - variables name is any combination of alphabet (a to z or A to Z), digit(0 to 9) and underscore(_).
       - valid variable cannot start with digit.
   - keywords
+      |||||||
+      |------|--------|------|--------|----|---------|
       | auto | double | int | struct | asm | private |
-      | break | else | long | switch | catch | public |
+      | break| else | long | switch | catch | public |
       | case | enum | register | typedef | class | protected|
-      |||||||
-      |||||||
-      |||||||
-      |||||||
-      |||||||
+      | char| extern | return | union | delete | template|
+      |const| float| short| unsigned| friend| this|
+      | continue| for| signed| void| inline| throw|
+      |default| goto| sizeof| volatile| new|try|
+      | do| if| static| while| operator|try|
+
+## Data type
+  | int | char | float | double | void |
+  |-----|------|-------|--------|------|
+  |2 bytes|1 bytes|4 bytes|8 bytes||
+  |int a=4;|char c='a';|float f=4.6;|double d;|
+  - assignment operator(=), like 5 assigned to b
+  - unlikeee c, you can declare variables even after-action statements.
     
+## output instruction
+  - in c, standard output device is monitor and printf() is use to send data/message to monitor.
+  - printf() is predefined function
+  - in c++, we can use cout to send data/message to monitor.
+  - cout is predefined object
+  - the operator << is called insertion or put to operator.
+  - printf("hello");       count << "hello"'
+  - printf("sum of %d and %d is %d", a, b, c);     count<<"sum of "<<a<<" and "<<b<<"is "<<c;
+  - first we insert "sum of " in double quote then, we insert variable a then "is" then b and eventually c.
+  - printf("%d", a+b);     count<<a+b;
+
+## input insttuction
+
