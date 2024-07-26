@@ -87,4 +87,25 @@
   - printf("%d", a+b);     count<<a+b;
 
 ## input insttuction
+  - in c, standard input device is keyboard and scanf() is use to receive data from keyboard.
+  - scanf() is a predefined function
+  - in c++, we can use cin to input data from keyboard
+  - the identifier cin is a predefiend object in c++
+  - the oprator >> is known as extraction or get from operator.
+  - scanf("%d", &a);     cin>>a;
+  - scanf("%d%f, &a, &b);    cin>>a>>b;
+## Remember
+  -	According to the ANSI standards for C language, explicit declaration of function is recommended but not mandatory.
+  - ANSI standards for C++ language says explicit declaration of function is compulsory.
 
+## Header Files
+  -	Predefined functions are declared in header files, so whenever you are using any predefined function in your code, you have to include specific header file that contains its declaration.
+
+## About iostream.h
+-	We need to include header file iostream.h, it contains declarations for the identifier cout and the operator <<. And also, for the identifier cin and operator >>.
+-	Header files contain declaration of identifiers.
+
+## endl
+-	Inserting endl into the output stream causes the screen cursor to move to the beginning of the next line.
+-	endl is a manipulator and it is declared in iostream.h
+-	‘\n’ character also works as it works in C.
