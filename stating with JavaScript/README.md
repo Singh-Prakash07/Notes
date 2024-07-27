@@ -1,7 +1,7 @@
   -Loosely typed language
   -Means we need not to define data type of variables
 ## Two ways to run JS
-  - In HTML
+### In HTML
     - Writing JS within HTML file	External Linking
         
 ```
@@ -23,19 +23,20 @@
 <body>
 ```
 
-•	In Node JS complier
-Use of var, let, const
-1.	var
-o	globally scoped
-o	can be updated and re-declare anywhere
-2.	let
-o	are block scoped
-o	can be updated, but not be re-declare once created.
-o	It stores undefined if not initialized.
-3.	Const
-o	Neither updated nor re-declared once created.
-o	Must be initialized with a value.
-Console(x);	Console.log(x);
-Var x = 10;	
-Error // x has not defined	Undefined //	
-
+-	In Node JS complier
+## Use of var, let, const
+###	var
+  -	globally scoped
+  -	can be updated and re-declare anywhere
+###	let
+  -	are block scoped
+  -	can be updated, but not be re-declare once created.
+  -	It stores undefined if not initialized.
+###	Const
+  -	Neither updated nor re-declared once created.
+  -	Must be initialized with a value.
+```
+Console.log(x);   Console.log(x);
+                  Var x = 10;	
+// Error          // x has not defined	"Undefined" due to hoisting //	
+```
