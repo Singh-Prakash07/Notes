@@ -57,8 +57,14 @@ Console.log(x);    // Error   Console.log(x); // undefined
   - Symbol       // `let symbol1 = Symbol();`, `let symbol2 = Symbol('description');`
   - Object       // `const person = {firstName: "John", lastName: "Doe"};`
 
-
-
+## checking equality
+  1. Strict Equality (===)
+       - Compares both the value and the type of the operands.
+         ```
+         console.log(5 === 5); // true
+         console.log(5 === "5"); // false (different types
+         ```
+  3. Loose Equality (==)
 
 
 
