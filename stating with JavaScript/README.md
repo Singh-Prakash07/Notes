@@ -42,19 +42,19 @@ Console.log(x);    // Error   Console.log(x); // undefined
 ## Data type
   - we use typeof to get data type of a variable ex--> ` console.log(typeof 123) // number`
   - JavaScript has 8 datatypes
-  - String       // "Yellow" , `js evaluates from left to right.`
+  - `String`       // "Yellow" , `js evaluates from left to right.`
     - 16 + 4 + "volvo" `20volvo` // "volvo" + 16 + 4 `volvo164` // 4 * "volvo" `NaN`
-  - Number       // 16, 6.7
-  - Bigint
+  - `Number`       // 16, 6.7
+  - `Bigint`
       - two ways to creating bigint
           -  `const bigIntValue = 123456789012345678901234567890n;`
           -  `const bigIntValue = BigInt("9007199254740992"); // Converting a string to BigInt
 `
-  - Boolean      // true, false
-  - Undefined    //Automatically assigned to variables when they are declared without initialization.
-  - Null         // Represents an intentional absence of any object value. `typeof null` return "object" (a historical quirk in js).
-  - Symbol       // `let symbol1 = Symbol();`, `let symbol2 = Symbol('description');`
-  - Object       // `const person = {firstName: "John", lastName: "Doe"};`
+  - `Boolean`      // true, false
+  - `Undefined`    //Automatically assigned to variables when they are declared without initialization.
+  - `Null`         // Represents an intentional absence of any object value. `typeof null` return "object" (a historical quirk in js).
+  - `Symbol`       // `let symbol1 = Symbol();`, `let symbol2 = Symbol('description');`
+  - `Object`       // `const person = {firstName: "John", lastName: "Doe"};`
 
 ## checking equality
   1. Strict Equality (===)
@@ -69,7 +69,9 @@ Console.log(x);    // Error   Console.log(x); // undefined
         console.log(5 == "5"); // true (type coercion)
         console.log(true == 1); // true (type coercion)
         ```
-
+## display on console
+  - `console.log("Hello"+name);`
+  - ```console.log(`Hello ${name}`)```
 
 
 
