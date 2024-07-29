@@ -1,11 +1,10 @@
   -Loosely typed language
   -Means we need not to define data type of variables
 ## Two ways to run JS
-### In HTML
-  - Writing JS within HTML file	External Linking
-        
+  - In HTML
 ```
-<body>
+Writing JS within HTML file	External Linking     // linking external JS file in HTML 
+<body>                      
   // html statement
 <script>
   // JS statements
@@ -65,7 +64,11 @@ Console.log(x);    // Error   Console.log(x); // undefined
          console.log(5 === "5"); // false (different types
          ```
   3. Loose Equality (==)
-
+      - Compares the values of the operands, but performs type coercion if necessary.
+        ```
+        console.log(5 == "5"); // true (type coercion)
+        console.log(true == 1); // true (type coercion)
+        ```
 
 
 
