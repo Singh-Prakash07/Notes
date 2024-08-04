@@ -37,7 +37,7 @@
   - object is an instance of class.
 
 # Software development in c/c++
-![image](https://github.com/user-attachments/assets/dcf3628a-474b-49f2-84b6-e59024c97928)
+![image](https://github.com/user-attachments/assets/31009a26-1dcc-41e3-a24f-17a008ecb208)
 
 ## Identifier in c++
   - constant
