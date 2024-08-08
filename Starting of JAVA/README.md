@@ -14,7 +14,7 @@
   - JAVA ME (Micro edition for mobiles)
   - ETC.
 # Java complier
-![image](https://github.com/user-attachments/assets/837d9630-86cc-427f-b95b-1fdfcc6c9d05)
+![image](https://github.com/user-attachments/assets/cff70d27-9e0c-4d4d-852d-802799b3e118)
 
 - Once you have written the code you save it's called source code then, compile the code using command javac abc.java.
 - The compiler checks for syntax errors and any other compile time errors then converts into intermediate code(abc.class file there will n .class file if n class is created in source code) known as bytecode. This intermediate code is platform independent, hence it is only understandable by the JVM(which is platform dependent) and not by user or hardware /OS layer.
