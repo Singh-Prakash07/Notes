@@ -29,10 +29,6 @@ Besides regular numbers, there are so-called “special numeric values” which 
     
     We can get it as a result of division by zero:
     
-    [](# "run")
-    
-    [](# "open in sandbox")
-    
     ``` alert ( 1 / 0 ); // Infinity ```
     
     Or just reference it directly:
@@ -68,13 +64,15 @@ We’ll see more about working with numbers in the chapter Numbers.
 
 ## 2. BigInt
 
-In JavaScript, the “number” type cannot safely represent integer values larger than `(253-1)` (that’s `9007199254740991`), or less than `-(253-1)` for negatives.
+In JavaScript, the “number” type cannot safely represent integer values larger than (2<sup>53</sup>-1) (that’s `9007199254740991`), or less than -(2<sup>53</sup>-1) for negatives.
 
-To be really precise, the “number” type can store larger integers (up to `1.7976931348623157 * 10308`), but outside of the safe integer range `±(253-1)` there’ll be a precision error, because not all digits fit into the fixed 64-bit storage. So an “approximate” value may be stored.
+To be really precise, the “number” type can store larger integers (up to `1.7976931348623157 * 10308`), but outside of the safe integer range ±(2<sup>53</sup>-1) there’ll be a precision error, because not all digits fit into the fixed 64-bit storage. So an “approximate” value may be stored.
 
 For example, these two numbers (right above the safe range) are the same:
 
-``` console`.``log``(``9007199254740991` `+` `1``)``;` `// 9007199254740992` console`.``log``(``9007199254740991` `+` `2``)``;` `// 9007199254740992` ```
+``` 
+console`.``log``(``9007199254740991` `+` `1``)``;` `// 9007199254740992` console`.``log``(``9007199254740991` `+` `2``)``;` `// 9007199254740992`
+```
 
 So to say, all odd integers greater than `(253-1)` can’t be stored at all in the “number” type.
 
