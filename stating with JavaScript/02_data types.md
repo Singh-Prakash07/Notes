@@ -165,7 +165,8 @@ Technically, it is possible to explicitly assign `undefined` to a variable:
 let age = 100;  // change the value to undefined age = undefined;
 alert(age); // "undefined"
 ```
-…But we don’t recommend doing that. Normally, one uses `null` to assign an “empty” or “unknown” value to a variable, while `undefined` is reserved as a default initial value for unassigned things.
++ But we don’t recommend doing that. Normally, one uses `null` to assign an “empty” or “unknown” value to a variable, while `undefined` is reserved as a default initial value for unassigned things.
++ Both null and undefined have a negligible memory footprint
 
 ## 7. Objects and 8. Symbols
 
