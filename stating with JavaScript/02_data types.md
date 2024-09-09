@@ -71,10 +71,11 @@ To be really precise, the “number” type can store larger integers (up to `1.
 For example, these two numbers (right above the safe range) are the same:
 
 ``` 
-console`.``log``(``9007199254740991` `+` `1``)``;` `// 9007199254740992` console`.``log``(``9007199254740991` `+` `2``)``;` `// 9007199254740992`
+console.log( 9007199254740991 + 1 ); // 9007199254740992
+console.log( 9007199254740991 + 2 ); // 9007199254740992
 ```
 
-So to say, all odd integers greater than `(253-1)` can’t be stored at all in the “number” type.
+So to say, all odd integers greater than `(2<sup>53</sup>-1)` can’t be stored at all in the “number” type.
 
 For most purposes `±(253-1)` range is quite enough, but sometimes we need the entire range of really big integers, e.g. for cryptography or microsecond-precision timestamps.
 
@@ -82,16 +83,20 @@ For most purposes `±(253-1)` range is quite enough, but sometimes we need the e
 
 A `BigInt` value is created by appending `n` to the end of an integer:
 
-``` `// the "n" at the end means it's a BigInt` `const` bigInt `=` `1234567890123456789012345678901234567890n``;` ```
+```
+// the "n" at the end means it's a BigInt
+const bigInt = 1234567890123456789012345678901234567890n;
+ ```
 
-As `BigInt` numbers are rarely needed, we don’t cover them here, but devoted them a separate chapter [BigInt](/bigint). Read it when you need such big numbers.
-
-## [String](#string)
+## 3. String
 
 A string in JavaScript must be surrounded by quotes.
 
-``````` `let` str `=` `"Hello"``;` `let` str2 `=` `'Single quotes are ok too'``;` `let` phrase `=` ````` `` ` ```can embed another` `` `${`str`}` ```` ` `` ``````;` ```````
-
+```
+let str = "Hello";
+let str2 = 'Single quotes are ok too';
+let phrase = `can be another ${str}`;
+```
 In JavaScript, there are 3 types of quotes.
 
 1.  Double quotes: `"Hello"`.
@@ -102,65 +107,48 @@ Double and single quotes are “simple” quotes. There’s practically no diffe
 
 Backticks are “extended functionality” quotes. They allow us to embed variables and expressions into a string by wrapping them in `${…}`, for example:
 
-[](# "run")
+```
+let name = "John";
 
-[](# "open in sandbox")
+// embed a variable
+alert( `Hello, ${name} !`); // Hello, John!
 
-`````` `let` name `=` `"John"``;`  `// embed a variable` `alert``(` ```` `` ` ```Hello,` `` `_${_`_name`}`_ ```!``` ` `` ```` `)``;` `// Hello, John!`  `// embed an expression` `alert``(` ```` `` ` ```the result is` ``` `_${_`_`1` `+` `2``}`_ ````` ` `` ```` `)``;` `// the result is 3` ``````
+embed an expression
+alert( `the result is ${1 + 2}`); // the result is 3
+```
 
 The expression inside `${…}` is evaluated and the result becomes a part of the string. We can put anything in there: a variable like `name` or an arithmetical expression like `1 + 2` or something more complex.
 
-Please note that this can only be done in backticks. Other quotes don’t have this embedding functionality!
-
-[](# "run")
-
-[](# "open in sandbox")
-
-``` `alert``(` `"the result is ${1 + 2}"` `)``;` `// the result is ${1 + 2} (double quotes do nothing)` ```
-
-We’ll cover strings more thoroughly in the chapter [Strings](/string).
-
-There is no _character_ type.
-
++ Please note that this can only be done in backticks. Other quotes don’t have this embedding functionality!
+### There is no _character_ type.
+```
 In some languages, there is a special “character” type for a single character. For example, in the C language and in Java it is called “char”.
-
 In JavaScript, there is no such type. There’s only one type: `string`. A string may consist of zero characters (be empty), one character or many of them.
-
-## [Boolean (logical type)](#boolean-logical-type)
+```
+## 4. Boolean
 
 The boolean type has only two values: `true` and `false`.
-
-This type is commonly used to store yes/no values: `true` means “yes, correct”, and `false` means “no, incorrect”.
-
-For instance:
-
-``` `let` nameFieldChecked `=` `true``;` `// yes, name field is checked` `let` ageFieldChecked `=` `false``;` `// no, age field is not checked` ```
-
+```
+let nameFieldChecked = true; // yes, name field is checked
+```
 Boolean values also come as a result of comparisons:
-
-[](# "run")
-
-[](# "open in sandbox")
-
-``` `let` isGreater `=` `4` `>` `1``;`  `alert``(` isGreater `)``;` `// true (the comparison result is "yes")` ```
-
-We’ll cover booleans more deeply in the chapter [Logical operators](/logical-operators).
-
-## [The “null” value](#the-null-value)
+``` 
+let isGreater = 4 > 1;
+alert( isGreater ); // true (the comparison result is "yes") 
+```
+## 5. The “null” value
 
 The special `null` value does not belong to any of the types described above.
 
 It forms a separate type of its own which contains only the `null` value:
+``` 
+let age = null;
+```
++ In JavaScript, `null` is not a “reference to a non-existing object” or a “null pointer” like in some other languages.
++ It’s just a special value which represents “nothing”, “empty” or “value unknown”.
++ The code above states that `age` is unknown.
 
-``` `let` age `=` `null``;` ```
-
-In JavaScript, `null` is not a “reference to a non-existing object” or a “null pointer” like in some other languages.
-
-It’s just a special value which represents “nothing”, “empty” or “value unknown”.
-
-The code above states that `age` is unknown.
-
-## [The “undefined” value](#the-undefined-value)
+## 6. The “undefined” value
 
 The special value `undefined` also stands apart. It makes a type of its own, just like `null`.
 
@@ -168,23 +156,18 @@ The meaning of `undefined` is “value is not assigned”.
 
 If a variable is declared, but not assigned, then its value is `undefined`:
 
-[](# "run")
-
-[](# "open in sandbox")
-
-``` `let` age`;`  `alert``(`age`)``;` `// shows "undefined"` ```
-
+```
+let age;
+alert(`age`); // shows "undefined"
+```
 Technically, it is possible to explicitly assign `undefined` to a variable:
-
-[](# "run")
-
-[](# "open in sandbox")
-
-``` `let` age `=` `100``;`  `// change the value to undefined` age `=` `undefined``;`  `alert``(`age`)``;` `// "undefined"` ```
-
+```
+let age = 100;  // change the value to undefined age = undefined;
+alert(age); // "undefined"
+```
 …But we don’t recommend doing that. Normally, one uses `null` to assign an “empty” or “unknown” value to a variable, while `undefined` is reserved as a default initial value for unassigned things.
 
-## [Objects and Symbols](#objects-and-symbols)
+## 7. Objects and 8. Symbols
 
 The `object` type is special.
 
@@ -194,15 +177,21 @@ Being that important, objects deserve a special treatment. We’ll deal with the
 
 The `symbol` type is used to create unique identifiers for objects. We have to mention it here for the sake of completeness, but also postpone the details till we know objects.
 
-## [The typeof operator](#type-typeof)
+## The typeof operator
 
-The `typeof` operator returns the type of the operand. It’s useful when we want to process values of different types differently or just want to do a quick check.
-
-A call to `typeof x` returns a string with the type name:
-
-``` `typeof` `undefined` `// "undefined"`  `typeof` `0` `// "number"`  `typeof` `10n` `// "bigint"`  `typeof` `true` `// "boolean"`  `typeof` `"foo"` `// "string"`  `typeof` `Symbol``(``"id"``)` `// "symbol"`  _`typeof` Math `// "object"  (1)`_  _`typeof` `null` `// "object"  (2)`_  _`typeof` alert `// "function"  (3)`_ ```
-
-The last three lines may need additional explanation:
++ The `typeof` operator returns the type of the operand. It’s useful when we want to process values of different types differently or just want to do a quick check.
++ A call to `typeof x` returns a string with the type name:
+```
+typeof undefined // "undefined"
+typeof 0 // "number"
+typeof 10n // "bigint"
+typeof true // "boolean"  typeof "foo" // "string"
+typeof Symbol("id") // "symbol"
+typeof Math // "object"
+typeof null // "object"
+typeof alert // "function"
+```
+### The last three lines may need additional explanation:
 
 1.  `Math` is a built-in object that provides mathematical operations. We will learn it in the chapter [Numbers](/number). Here, it serves just as an example of an object.
 2.  The result of `typeof null` is `"object"`. That’s an officially recognized error in `typeof`, coming from very early days of JavaScript and kept for compatibility. Definitely, `null` is not an object. It is a special value with a separate type of its own. The behavior of `typeof` is wrong here.
@@ -218,7 +207,7 @@ Usually, such parentheses contain a mathematical expression, such as `(2 + 2)`, 
 
 Some people prefer `typeof(x)`, although the `typeof x` syntax is much more common.
 
-## [Summary](#summary)
+## Summary
 
 There are 8 basic data types in JavaScript.
 
@@ -238,35 +227,3 @@ The `typeof` operator allows us to see which type is stored in a variable.
 *   Usually used as `typeof x`, but `typeof(x)` is also possible.
 *   Returns a string with the name of the type, like `"string"`.
 *   For `null` returns `"object"` – this is an error in the language, it’s not actually an object.
-
-In the next chapters, we’ll concentrate on primitive values and once we’re familiar with them, we’ll move on to objects.
-
-## [Tasks](#tasks)
-
-### [String quotes](#string-quotes)
-
-[](/task/string-quotes)
-
-importance: 5
-
-What is the output of the script?
-
-`````` `let` name `=` `"Ilya"``;`  `alert``(` ```` `` ` ```hello` ``` `${``1``}` ````` ` `` ```` `)``;` `// ?`  `alert``(` ```` `` ` ```hello` ``` `${``"name"``}` ````` ` `` ```` `)``;` `// ?`  `alert``(` ````` `` ` ```hello` `` `${`name`}` ```` ` `` ````` `)``;` `// ?` ``````
-
-solution
-
-Backticks embed the expression inside `${...}` into the string.
-
-[](# "run")
-
-[](# "open in sandbox")
-
-`````` `let` name `=` `"Ilya"``;`  `// the expression is a number 1` `alert``(` ```` `` ` ```hello` ``` `${``1``}` ````` ` `` ```` `)``;` `// hello 1`  `// the expression is a string "name"` `alert``(` ```` `` ` ```hello` ``` `${``"name"``}` ````` ` `` ```` `)``;` `// hello name`  `// the expression is a variable, embed it` `alert``(` ````` `` ` ```hello` `` `${`name`}` ```` ` `` ````` `)``;` `// hello Ilya` ``````
-
-[Ctrl + ←Previous lesson](/variables)[Ctrl + →Next lesson](/alert-prompt-confirm)
-
-Share[](https://twitter.com/share?url=https%3A%2F%2Fjavascript.info%2Ftypes)[](https://www.facebook.com/sharer/sharer.php?s=100&p%5Burl%5D=https%3A%2F%2Fjavascript.info%2Ftypes)
-
-[Tutorial map](/tutorial/map)
-
-document.getElementById("javascriptinfo\_script").onload=function(){\_bsa.init("custom","CKYDEK3U","placement:javascriptinfo\_iconbar",{target:"#javascriptinfo\_iconbar",template:'\\n <div class="iconBarFlex">\\n <a href="##statlink##" class="iconBarLink" rel="sponsored noopener" target="\_blank" title="##company## — ##tagline##">\\n <div class="iconBarImage" style="background-color: ##backgroundColor##;">\\n <img height="30" width="30" src="##image##" alt="##company## logo">\\n </div>\\n <div class="iconBarText">\\n <div class="iconBarTagline">##companyTagline##</div>\\n <div class="iconBarDescription">##description##</div>\\n </div>\\n </a>\\n <a href="##ad\_via\_link##" class="iconBarVia" rel="sponsored noopener" target="\_blank">ads via BuySellAds</a>\\n </div>\\n '})};
