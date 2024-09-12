@@ -1,7 +1,8 @@
-  -Loosely typed language
+  -Dynamic typed language
   -Means we need not to define data type of variables
-## Two ways to run JS
-  - In HTML
+## Three ways to run JS
+1. In HTML
+  - In same HTML file
 ```
 Writing JS within HTML file	External Linking     // linking external JS file in HTML 
 <body>                      
@@ -22,12 +23,14 @@ Writing JS within HTML file	External Linking     // linking external JS file in 
 <body>
 ```
 
--	In Node JS complier
+2.	In Node JS complier
+3.	In browser's console
 ## Use of var, let, const
 ###	var
   -	globally scoped
   -	can be updated and re-declare anywhere
   -	It stores undefined if not initialized.
+  -	try to not use var in js
 ###	let
   -	are block scoped
   -	can be updated, but not be re-declare once created.
@@ -35,26 +38,11 @@ Writing JS within HTML file	External Linking     // linking external JS file in 
 ###	Const
   -	Neither updated nor re-declared once created.
   -	Must be initialized with a value.
+  -	mostly we use const type variable
 ```
 Console.log(x);    // Error   Console.log(x); // undefined
                               Var x = 10;	    // due to hoisting, later we talk about hoisting	
 ```
-## Data type
-  - we use typeof to get data type of a variable ex--> ` console.log(typeof 123) // number`
-  - JavaScript has 8 datatypes
-  - `String`       // "Yellow" , `js evaluates from left to right.`
-    - 16 + 4 + "volvo" `20volvo` // "volvo" + 16 + 4 `volvo164` // 4 * "volvo" `NaN`
-  - `Number`       // 16, 6.7
-  - `Bigint`
-      - two ways to creating bigint
-          -  `const bigIntValue = 123456789012345678901234567890n;`
-          -  `const bigIntValue = BigInt("9007199254740992"); // Converting a string to BigInt
-`
-  - `Boolean`      // true, false
-  - `Undefined`    //Automatically assigned to variables when they are declared without initialization.
-  - `Null`         // Represents an intentional absence of any object value. `typeof null` return "object" (a historical quirk in js).
-  - `Symbol`       // `let symbol1 = Symbol();`, `let symbol2 = Symbol('description');`
-  - `Object`       // `const person = {firstName: "John", lastName: "Doe"};`
 
 ## checking equality
   1. Strict Equality (===)
@@ -69,10 +57,25 @@ Console.log(x);    // Error   Console.log(x); // undefined
         console.log(5 == "5"); // true (type coercion)
         console.log(true == 1); // true (type coercion)
         ```
-## display on console
-  - `console.log("Hello"+name);`
-  - ```console.log(`Hello ${name}`)```
+### All operators are same as in java
+```
+'Prakash'+34; // 'Prakash34'  (String)
+'23'+5;       //  '235'       (string)
+'45'*2;       //  90          (Number)
+'Prakash'*5   // Error
+'ab'*'cd'     // NaN 
+```
+## Ternary Operator
+```
+const age = 20;
+age >= 18 ? console.log('Yes') : console.log('No');
+result  --> No
 
+let result = age >= 45 ? 'Yes' : 'No';
+// result = 'No'
+result = age>45 ? console.log('yes') : console.log('no'); // no
+// result = undefined
+```
 
 
 
