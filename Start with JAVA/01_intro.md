@@ -1,3 +1,8 @@
+# install JDK in ubutnu
+  1. open oracle download x64 Devian package(for 64 archit.) lets downloaded file name is` jdk-23_linux-x64_bin.deb`
+  2. Open terminal in download write ` sudo dpkg -i jdk-23_linux-x64_bin.deb`. and we are done.
+  3. on `snapcraft.io` we can find command to download community version of intellij IDEA.
+  4. `sudo snap install intellij-idea-community --classic`.
 ## History of JAVA
   - Java was developed by James Gosling at sun microsystem lnc.
   - Java originated at sun microsystem lnc in 1991.
