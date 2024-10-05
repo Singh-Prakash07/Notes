@@ -1,5 +1,5 @@
-  -Dynamic typed language
-  -Means we need not to define data type of variables
++ JS is a dynamic typed language. This means that the type of a variable is determined at runtime, not during compilation. Unlike statically typed languages like Java or C++
++ Means we need not to define data type of variables
 ## Three ways to run JS
 1. In HTML
   - In same HTML file
@@ -57,13 +57,15 @@ Console.log(x);    // Error   Console.log(x); // undefined
         console.log(5 == "5"); // true (type coercion)
         console.log(true == 1); // true (type coercion)
         ```
-### All operators are same as in java
+### All operators are same as in java(+, -, *, etc.)
 ```
 'Prakash'+34; // 'Prakash34'  (String)
 '23'+5;       //  '235'       (string)
 '45'*2;       //  90          (Number)
 'Prakash'*5   // Error
-'ab'*'cd'     // NaN 
+'ab'*'cd'     // NaN
+120/4         // 30  
+120 / 100     // 1.2   # it automatically convert it in decimal  
 ```
 ## Ternary Operator
 ```
