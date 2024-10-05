@@ -1,5 +1,3 @@
-+ JS is a dynamic typed language. This means that the type of a variable is determined at runtime, not during compilation. Unlike statically typed languages like Java or C++
-+ Means we need not to define data type of variables
 ## Three ways to run JS
 1. In HTML
   - In same HTML file
