@@ -38,7 +38,7 @@ Writing JS within HTML file	External Linking     // linking external JS file in 
 ###	Const
   -	Neither updated nor re-declared once created.
   -	Must be initialized with a value.
-  -	mostly we use const type variable
+  -	mostly we use const type variable in js.
 ```
 Console.log(x);    // Error   Console.log(x); // undefined
                               Var x = 10;	    // due to hoisting, later we talk about hoisting	
