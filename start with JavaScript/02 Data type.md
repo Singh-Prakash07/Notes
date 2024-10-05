@@ -109,6 +109,10 @@ alert( `Hello, ${name} !`); // Hello, John!
 
 embed an expression
 alert( `the result is ${1 + 2}`); // the result is 3
+
+// multiline string
+const str = ` hellow
+              this is a multiline string`;
 ```
 
 + The expression inside `${…}` is evaluated and the result becomes a part of the string. We can put anything in there: a variable like `name` or an arithmetical expression like `1 + 2` or something more complex.
