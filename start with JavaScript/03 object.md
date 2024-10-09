@@ -2,17 +2,20 @@
 + Ihere are eight data types in JavaScript. Seven of them are called “primitive”, 
 because their values contain only a single thing (be it a string or a number or whatever).
 + In contrast, objects are used to store keyed collections of various data and more complex entities.
-+ In JavaScript, An object can be created with figure brackets {…} with an optional list of properties. 
++ In JavaScript, An object can be created with figure brackets {…} with an optional list of properties.
+  ```
+    let user = {     // an object created with property
+    name: "John",  // by key "name" store value "John"
+    age: 30        // by key "age" store value 30
+    "likes birds": true,  // multiword property name must be quoted
+    };
+  ```
 + A property is a “key: value” pair, where key is a string (also called a “property name”), and value can be anything.
 + An empty object (“empty cabinet”) can be created using one of two syntaxes:
-```
-let user = new Object(); // "object constructor" syntax
-let user = {};  // "object literal" syntax
-let user = {     // an object created with property
-  name: "John",  // by key "name" store value "John"
-  age: 30        // by key "age" store value 30
-};
-```
+  ```
+    let user = new Object(); // "object constructor" syntax
+    let user = {};  // "object literal" syntax
+  ```
 
 The value can be of any type. Let’s add a boolean one:
 
@@ -20,27 +23,15 @@ user.isAdmin = true;
 > [!NOTE]
 > To remove a property, we can use the delete operator: `delete user.age;`
 
-We can also use multiword property names, but then they must be quoted:
+> [!TIP]
+> The last property in the list may end with a comma:
+> That is called a “trailing” or “hanging” comma. Makes it easier to add/remove/move around properties, because all lines become alike.
 
-let user = {
-  name: "John",
-  age: 30,
-  "likes birds": true  // multiword property name must be quoted
-};
-
-The last property in the list may end with a comma:
-
-let user = {
-  name: "John",
-  age: 30,
-}
-That is called a “trailing” or “hanging” comma. Makes it easier to add/remove/move around properties, because all lines become alike.
-
-Square brackets
-For multiword properties, the dot access doesn’t work:
-
+## Square brackets
++ For multiword properties, the dot access doesn’t work:
 // this would give a syntax error
-user.likes birds = true
+> [!CAUTION]
+> user.likes birds = true
 JavaScript doesn’t understand that. It thinks that we address user.likes, and then gives a syntax error when comes across unexpected birds.
 
 The dot requires the key to be a valid variable identifier. That implies: contains no spaces, doesn’t start with a digit and doesn’t include special characters ($ and _ are allowed).
