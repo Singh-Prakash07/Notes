@@ -1,7 +1,7 @@
 For more follow this [link](https://javascript.info/first-steps)
 # Data types
 + A value in JavaScript is always of a certain type. For example, a string or a number.
-+ There are eight basic data types in JavaScript.
++ There are eight basic data types in JS, 7 primitve(number, string, boolean,  and 1 non-primitive(Object).
 + We can put any type in a variable. For example, a variable can at one moment be a string and then store a number:
 ``` 
 // no error
@@ -37,14 +37,16 @@ n =12.345;
     
     ``` alert( "not a number" / 2 ); // NaN, such division is erroneous ```
     
-    `NaN` is sticky. Any further mathematical operation on `NaN` returns `NaN`:
++  `NaN` is sticky. Any further mathematical operation on `NaN` returns `NaN`:
     
     ```
         alert( NaN + 1 ); // NaN
     alert( 3 * NaN ); // NaN
     alert( "not a number" / 2- 1 ); // NaN
     ```
-    So, if there’s a `NaN` somewhere in a mathematical expression, it propagates to the whole result (there’s only one exception to that: `NaN ** 0` is `1`).
++  If there’s a `NaN` somewhere in a mathematical expression, it propagates to the whole result (there’s only one exception to that: `NaN ** 0` is `1`).
+> [!CAUTION]
+> if we use `typeof NaN` it returns number, but NaN is not a number.
     
 
 ## Mathematical operations are safe
