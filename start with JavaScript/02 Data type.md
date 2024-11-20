@@ -1,3 +1,4 @@
+For more follow this [link](https://javascript.info/first-steps)
 # Data types
 + A value in JavaScript is always of a certain type. For example, a string or a number.
 + There are eight basic data types in JavaScript.
