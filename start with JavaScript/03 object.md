@@ -1,7 +1,5 @@
 # Objects
-+ Ihere are eight data types in JavaScript. Seven of them are called “primitive”, 
-because their values contain only a single thing (be it a string or a number or whatever).
-+ In contrast, objects are used to store keyed collections of various data and more complex entities.
++ Objects are used to store keyed collections of various data and more complex entities.
 + In JavaScript, An object can be created with figure brackets {…} with an optional list of properties.
   ```
     let user = {     // an object created with property
