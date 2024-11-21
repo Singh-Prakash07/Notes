@@ -73,7 +73,7 @@ console.log( 9007199254740991 + 1 ); // 9007199254740992
 console.log( 9007199254740991 + 2 ); // 9007199254740992
 ```
 
-+ So to say, all odd integers greater than `(2<sup>53</sup>-1)` can’t be stored at all in the “number” type.
++ So to say, all odd integers greater than (2<sup>53</sup>-1) can’t be stored at all in the “number” type.
 
 + For most purposes `±(253-1)` range is quite enough, but sometimes we need the entire range of really big integers, e.g. for cryptography or microsecond-precision timestamps.
 
