@@ -63,7 +63,9 @@ Console.log(x);    // Error   Console.log(x); // undefined
 'Prakash'*5   // Error
 'ab'*'cd'     // NaN
 120/4         // 30  
-120 / 100     // 1.2   # it automatically convert it in decimal  
+120 / 100     // 1.2   # it automatically convert it in decimal
+'1'+2+2       // 122
+1+2+'2'       // 32
 ```
 ## Ternary Operator
 ```
