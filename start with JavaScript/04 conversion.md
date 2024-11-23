@@ -29,3 +29,8 @@
 null --> false
 undefined-> false
 ```
+
+# Heap and stack Memory
++ Primitive type stored in Stack memory.( variable contains actual value)
++ Non-Primitive type stored in heap memory.( variable contains reference of value(or object, array).
+
