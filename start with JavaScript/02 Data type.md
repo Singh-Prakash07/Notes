@@ -1,7 +1,7 @@
 For more follow this [link](https://javascript.info/first-steps)
 # Data types
 + A value in JavaScript is always of a certain type. For example, a string or a number.
-+ There are eight basic data types in JS, 7 primitve(number, string, boolean,  and 1 non-primitive(Object).
++ There are eight basic data types in JS, 7 primitve(number, string, boolean, null, undefined, symbol, bigInt)  and non-primitive(Object, array, etc).
 + We can put any type in a variable. For example, a variable can at one moment be a string and then store a number:
 ``` 
 // no error
