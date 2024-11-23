@@ -105,7 +105,8 @@ In JavaScript, there are 3 types of quotes.
 ```
 let name = "John";
 
-// embed a variable
+// embed a variable : this is called string interpolation
+// we should prefer this way to write stirng with variables.
 alert( `Hello, ${name} !`); // Hello, John!
 
 embed an expression
