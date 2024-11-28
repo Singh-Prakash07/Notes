@@ -140,7 +140,7 @@ str.slice(-7, -1)   //prakas     p -7, r -6, a -5,..
 str.slice(-8, 3)  // pra     
 str.slice(-7, 0)  // ''          // since 0 is first character and it exclude 0.
 str.trim()   // remove space from both side of string. there concept of start and end also.
-str.replace('a', 'it')  // 'pritkitsh'     replace all occurance of first char. with second char
+str.replace('a', 'it')  // 'pritkitsh'     return new string with replaced first occurance of first char. with second char, we replaceAll option too.
 str.includes('sundar')   // return true if present else flase.
 str.split("a")  // return an array ['pr', 'k', 'sh']        , spliter will be in double quote("").  
 ```
