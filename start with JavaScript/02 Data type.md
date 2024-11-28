@@ -103,7 +103,7 @@ In JavaScript, there are 3 types of quotes.
 + Double and single quotes are “simple” quotes. There’s practically no difference between them in JavaScript.
 + Backticks are “extended functionality” quotes. They allow us to embed variables and expressions into a string by wrapping them in `${…}`, for example:
 + When we use new String to create string it becomes object and it has much more methods along with basic string properties.
-+ All methods are there in prototype but we can access directly using dot eg. `str.charAt(i)`.
++ All methods are there in prototype but we can access directly using dot(.) eg. `str.charAt(i)`.
 ```
 let name = "John";
 
@@ -126,6 +126,23 @@ const str = ` hellow
 ```
 In some languages, there is a special “character” type for a single character. For example, in the C language and in Java it is called “char”.
 In JavaScript, there is no such type. There’s only one type: `string`. A string may consist of zero characters (be empty), one character or many of them.
+```
+### Some More Methods of String
+```
+let str = 'prakash';
+str.__proto__;
+str.length;  // return length of string 7
+str.toUpperCase();  // PRAKASH
+str.charAt(3);     // 'k'
+str.indexOf('a');  // 3
+str.substring(2,4); // ak  start with index 2 and end at 3. negative value in substring treated as +ve.
+str.slice(-7, -1)   //prakas     p -7, r -6, a -5,.. 
+str.slice(-8, 3)  // pra     
+str.slice(-7, 0)  // ''          // since 0 is first character and it exclude 0.
+str.trim()   // remove space from both side of string. there concept of start and end also.
+str.replace('a', 'it')  // 'pritkitsh'     replace all occurance of first char. with second char
+str.includes('sundar')   // return true if present else flase.
+str.split("a")  // return an array ['pr', 'k', 'sh']        , spliter will be in double quote("").  
 ```
 ## 4. Boolean
 
