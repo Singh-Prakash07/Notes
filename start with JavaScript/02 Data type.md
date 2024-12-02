@@ -98,11 +98,11 @@ In JavaScript, there are 3 types of quotes.
 1.  Double quotes: `"Hello"`.
 2.  Single quotes: `'Hello'`.
 3.  Backticks: `` `Hello` ``.
-4.  class:     `let str = new String('string');`
+4.  class:     `let str = new String('string');` // we don't more often this method.
 
 + Double and single quotes are “simple” quotes. There’s practically no difference between them in JavaScript.
 + Backticks are “extended functionality” quotes. They allow us to embed variables and expressions into a string by wrapping them in `${…}`, for example:
-+ When we use new String to create string it becomes object and it has much more methods along with basic string properties.
++ When we use new String to create string it becomes object and it has much more methods along with basic string properties, this method is less common.
 + All methods are there in prototype but we can access directly using dot(.) eg. `str.charAt(i)`.
 ```
 let name = "John";
