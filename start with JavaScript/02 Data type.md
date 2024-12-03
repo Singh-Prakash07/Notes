@@ -21,7 +21,7 @@ n =12.345;
 + There are many operations for numbers, e.g. multiplication `*`, division `/`, addition `+`, subtraction `-`, and so on.
 + Besides regular numbers, there are so-called “special numeric values” which also belong to this data type: `Infinity`, `-Infinity` and `NaN`.
 
-*   `Infinity` represents the mathematical Infinity(∞). It is a special value that’s greater than any number.
++   `Infinity` represents the mathematical Infinity(∞). It is a special value that’s greater than any number.
     
     We can get it as a result of division by zero:
     
@@ -31,7 +31,7 @@ n =12.345;
     
     ``` alert( Infinity ); // Infinity ```
     
-*   `NaN` represents a computational error. It is a result of an incorrect or an undefined mathematical operation, for instance:
++   `NaN` represents a computational error. It is a result of an incorrect or an undefined mathematical operation, for instance:
     
     ``` alert( "not a number" / 2 ); // NaN, such division is erroneous ```
     
@@ -45,7 +45,22 @@ n =12.345;
 +  If there’s a `NaN` somewhere in a mathematical expression, it propagates to the whole result (there’s only one exception to that: `NaN ** 0` is `1`).
 > [!CAUTION]
 > if we use `typeof NaN` it returns number, but NaN is not a number.
-    
+## some Methods of Number
+```
+let score = 89371;
+score.toString();  // "89371"
+score.toString().length() // 5
+score.toFixed(2) // 89.38    Controls the number of decimal places.
+score = 123.56;
+score.toPrecision(3); // 124   Controls the total number of significant digits, it return string type, it takes value between 1-21.
+score.toPrecision(2); // 1.2e+2
+score = 1234567.89;
+score.toLocaleString('en-IN', { style: 'currency', currency: 'USD' }); // "$12,34,567.89"  Displaying numbers in a specific format including currency, percentage, and others.
+score.toLocalString('en-IN'); // "12,34,567.89"
+Number.Max_VALUE //
+Number.MIN_VALUE //
+Number.MAX_SAFE_INTEGER //
+```
 
 ## Mathematical operations are safe
 ```
