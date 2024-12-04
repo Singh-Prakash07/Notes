@@ -57,9 +57,15 @@ score.toPrecision(2); // 1.2e+2
 score = 1234567.89;
 score.toLocaleString('en-IN', { style: 'currency', currency: 'USD' }); // "$12,34,567.89"  Displaying numbers in a specific format including currency, percentage, and others.
 score.toLocalString('en-IN'); // "12,34,567.89"
-Number.Max_VALUE //
-Number.MIN_VALUE //
-Number.MAX_SAFE_INTEGER //
+Number.Max_VALUE // 1.7976931348623157e+308
+Number.MIN_VALUE // 5e-324
+Number.MAX_SAFE_INTEGER // 9007199254740991
+Math.abs() // for mod of a number
+Math.round() // decimal to integer
+Math.floor(), Math.ceil();
+Math.sqrt(25) // 5, Math.min(2, 4, 6, 8) // 2
+Math.random(); // between [0, 1)
+return Math.floor(Math.random() * (max - min + 1)) + min;   // it returns value between [min, max]
 ```
 
 ## Mathematical operations are safe
