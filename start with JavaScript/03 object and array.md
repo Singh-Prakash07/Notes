@@ -11,8 +11,8 @@
 + A property is a “key: value” pair, where key is a string (also called a “property name”), and value can be anything.
 + An empty object (“empty cabinet”) can be created using one of two syntaxes:
   ```
-    let user = new Object(); // "object constructor" syntax
-    let user = {};  // "object literal" syntax
+    let user = new Object(); // "object constructor" syntax, singleton type
+    let user = {};  // "object literal" syntax, Non-singleton type
   ```
 
 The value can be of any type. Let’s add a boolean one:
@@ -55,7 +55,8 @@ let user = {};
     let key = "name";
     alert( user.key ) // undefined
   ```
-## Computed properties
++ we `Ojbect.freeze(fruit)`; to freeze object, now any change in fruit will not propogate.
+## Computed properties.
 + We can use square brackets in an object literal, when creating an object. That’s called computed properties.
   ```
     let fruit = prompt("Which fruit to buy?", "apple");
@@ -65,8 +66,18 @@ let user = {};
     alert( bag.apple ); // 5 if fruit="apple"
     let bag = {
     [fruit + 'Computers']: 5 // bag.appleComputers = 5
+    
     };
   ```
+## use symbol as key
+```
+const mysym = Symbol("key1");
+const user = {
+                [mysym]: "prakash"; // syntax of using symbol as key 
+}
+console.log(typeof user[mysym]) // Symbol
+user[mysym];  // "prakash"
+```
 + The meaning of a computed property is simple: [fruit] means that the property name should be taken from fruit.
 + Square brackets are much more powerful than dot notation. They allow any property names and variables. But they are also more cumbersome to write.
 
@@ -157,3 +168,36 @@ In real code, we often use existing variables as values for property names.
     alert( String(Math.trunc(Number("+49"))) ); // "49", not same "+49" ⇒ not integer property
     alert( String(Math.trunc(Number("1.2"))) ); // "1", not same "1.2" ⇒ not integer property
   ```
+## we use function as variable in object
+```
+const user = {name: "prakash",};
+user.greeting = function(){
+  console.log(`Hello JS user ${this.name}`); //using this we get any attribute and property of object.
+}
+console.log(user.greeting()); // "Hello JS User Prakash"
+```
+## Methods of Object
+1. Creating Object
+```
+const obj = {} //
+const obj = new Object();
+const obj = { name: "prakash",};
+```
+2. Accessing
+```
+obj.name;  // dot notation
+obj["name"]; // sometimes when key name is not in one word
+obj[name];  // when name is symbol or when need to evaluate an expression before in order to get key
+obj.name(); // to access any function
+```
+3. Adding
+
+4. Deleting properties
+
+5. Check if key is present
+
+6. Freeze
+
+7. Seal
+
+8. Getting Array of Keys and Values
