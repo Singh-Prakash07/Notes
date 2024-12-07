@@ -228,3 +228,12 @@ const keys = Object.keys(obj); // array of keys
 const values = Object.values(obj); // array of values
 const entries = Object.enteries(obj); // return 2D array with col1:key and col2: value
 ```
+9. Iterate an object
+```
+for (const key in Obj) {
+    console.log(key, Obj[key]);
+}
+for (const [key, value] of Object.entries(obj)) {
+    console.log(key, value);
+}
+```
