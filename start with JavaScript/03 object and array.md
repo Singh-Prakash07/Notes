@@ -190,14 +190,41 @@ obj["name"]; // sometimes when key name is not in one word
 obj[name];  // when name is symbol or when need to evaluate an expression before in order to get key
 obj.name(); // to access any function
 ```
+> [!Note]
+> When you use a number as a key, it's internally converted to a string. This means that obj[1] is equivalent to obj["1"].
 3. Adding
-
+```
+obj.name = "Prakash"; // key is string
+obj["name"] = "Prakash";
+const name = Symbol("Singh");
+obj[name] = "Prakash";
+obj.name = function(){ console.log("Prakash");
+```
 4. Deleting properties
-
+```
+delete obj.name;
+delete obj['name'];
+```
 5. Check if key is present
+```
+obj.hasOwnProperty("name");
 
+if(name in obj)
+  return true;
+```
 6. Freeze
-
+```
+Object.freeze(obj); // once frozen, one cannot add, remove, modify existing property.
+```
 7. Seal
 
+```
+Object.seal(obj); // we can remove and modify but cannot add new property.
+```
 8. Getting Array of Keys and Values
+
+```
+const keys = Object.keys(obj); // array of keys
+const values = Object.values(obj); // array of values
+const entries = Object.enteries(obj); // return 2D array with col1:key and col2: value
+```
