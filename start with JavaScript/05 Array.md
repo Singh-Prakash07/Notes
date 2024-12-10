@@ -64,4 +64,6 @@ for (let key in arr) { // we shouldn’t use for..in for arrays, since it use in
 0 == ''; // true, as '' becomes converted to number 0
 '0' == ''; // false, no type conversion, different strings
 ```
+## Some more methods
 
++ Array methods have different behaviors when encountering empty slots in sparse arrays. 
