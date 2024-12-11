@@ -64,6 +64,25 @@ for (let key in arr) { // we shouldn’t use for..in for arrays, since it use in
 0 == ''; // true, as '' becomes converted to number 0
 '0' == ''; // false, no type conversion, different strings
 ```
-## Some more methods
+## Some more about methods
 
-+ Array methods have different behaviors when encountering empty slots in sparse arrays. 
+### Array methods and empty slots
++ Array methods have different behaviors when encountering empty slots in sparse arrays.
++ methds like concat filter(), forEach(), indexOf(), map(), reverse(), slice(), sort(), and splice(), etc don't visit empty slots at all.
++ entries(), fill(), find(), findIndex(), includes(), join(), keys(), toLocaleString(), toSorted(), etc do not treat empty slots specially.
+  
+### Copying methods and mutating methods
++ Some methods do not mutate the existing array that the method was called on, but instead return a new array eg. toReversed(), toSorted(), etc.
++ Mutating methos are push(), pop(), sort(), splice(), etc.
++ An easy way to change a mutating method into a non-mutating alternative is to use the spread syntax or slice() to create a copy first.
+
+
+
+
+
+
+
+
+
+
+
