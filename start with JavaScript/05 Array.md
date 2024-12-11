@@ -78,6 +78,12 @@ for (let key in arr) { // we shouldn’t use for..in for arrays, since it use in
 
 
 
+Arrays.sort(a);
+        Arrays.sort(b);
+
+
+
+
 
 
 
