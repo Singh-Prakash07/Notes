@@ -39,7 +39,6 @@ arr.unshift('Apple'); // Add the element to the beginning of the array, advancin
 
 ```
 + Methods push/pop run fast, while shift/unshift are slow.
-
 ## Loops
 ```
 for (let i = 0; i < arr.length; i++) {
@@ -50,7 +49,7 @@ for (let fruit of fruits) {
   alert( fruit );
 }
 
-for (let key in arr) { // we shouldn’t use for..in for arrays, since it use in object
+for (let key in arr) { // we shouldn’t use for..in for arrays, since it use in object and it is slow
   alert( arr[key] ); 
 }
 ```
@@ -72,13 +71,22 @@ for (let key in arr) { // we shouldn’t use for..in for arrays, since it use in
 + entries(), fill(), find(), findIndex(), includes(), join(), keys(), toLocaleString(), toSorted(), etc do not treat empty slots specially.
   
 ### Copying methods and mutating methods
-+ Some methods do not mutate the existing array that the method was called on, but instead return a new array eg. toReversed(), toSorted(), etc.
-+ Mutating methos are push(), pop(), sort(), splice(), etc.
-+ An easy way to change a mutating method into a non-mutating alternative is to use the spread syntax or slice() to create a copy first.
+ + Some methods do not mutate the existing array that the method was called on, but instead return a new array eg. toReversed(), toSorted(), etc.
+ + Mutating methos are push(), pop(), sort(), splice(), etc.
+ + An easy way to change a mutating method into a non-mutating alternative is to use the spread syntax or slice() to create a copy first.
 
-
-
-Arrays.sort(a);
+## Some More Methods
++ `const arr = [1, 2, 3, 4, 5]`
++ `arr.includes(4)` // true  -->return true if 4 exits in array else false.
++ `arr.indexOf(4)` // 3  -->return the first index of 4, return -1 if 4 not exits in array.
++ `arr.join()` // "1,2,3,4,5"
++ `arr.join("-")` //'1-2-3-4-5'
++ `arr.slice(1, 3)` //`[2, 3]` returns a new array including index 1 to 2. without changing original array.
++ `arr.splice(1, 3)` // `[2, 3, 4]` it return a new array including index 1 to 3. but removes these element from original array.
++ `const newArr = arr1.concate(arr2)` // it merge both elements of both array and returns a new array.
++  we have a better way to merge more than one arrays using spread operator.
++  `const newArr = [...arr1, ...arr2, ...arr3]`// so on.
++ `Arrays.sort(arr)` // It basically sort an array in ascending order.
         Arrays.sort(b);
 
 
