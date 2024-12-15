@@ -86,8 +86,23 @@ for (let key in arr) { // we shouldn’t use for..in for arrays, since it use in
 + `const newArr = arr1.concate(arr2)` // it merge both elements of both array and returns a new array.
 +  we have a better way to merge more than one arrays using spread operator.
 +  `const newArr = [...arr1, ...arr2, ...arr3]`// so on.
-+ `Arrays.sort(arr)` // It basically sort an array in ascending order.
-        Arrays.sort(b);
++ `arr.flat(Infinity)` // to reduce 2D-3D or more into 1D array.
+
+### Some Static methods
+1. `Arrays.sort(arr)` // It basically sort an array in ascending order.
+2. from()
+```
+Array.from(arrayLike)
+Array.from(arrayLike, mapFn)
+Array.from(arrayLike, mapFn, thisArg)
+console.log(Array.from('foo')); // ["f", "o", "o"]
+console.log(Array.from([1, 2, 3], (x) => x + x));// [2, 4, 6]
+```
+3. `Array.isArray(arr)` // return true/false
+4. `Array.of('foo', 2, 'bar', true); // ["foo", 2, "bar", true]`
+5. Suppose we have 4-5 variable and want to create an array. `Array.of(element1, element2, /* …, */ elementN)`
+6. etc..
+
 
 
 
