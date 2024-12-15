@@ -237,3 +237,24 @@ for (const [key, value] of Object.entries(obj)) {
     console.log(key, value);
 }
 ```
+10. merge more than one object
++ Using assign static method
+```
+const source = { b: 4, c: 5 };
+const returnedTarget = Object.assign(target, source); merge source into target and returns.
+console.log(target); //  { a: 1, b: 4, c: 5 } mutated target object.
+console.log(returnedTarget === target); // true
+Object.assign(target, source1, source2, /* …, */ sourceN)
+// we prefer below syntax.
+const copy = Object.assign({}, source1, source2, /* …, */ sourceN);// we take target as empty object.
+```
++ Using spread method
+```
+const newObj = {...obj1, ...obj2, ...obj3, etc};
+```
+### Object de-structure
+```
+const {b, c} = source; // we can write all keys here or only one as desire, now we can fetch key directly without object name.
+console.log(b); // 4   but remember there should be no any other variable with same name.
+const {b: number1} = source // we can change key name, but original name will be unaltered.
+```
