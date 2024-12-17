@@ -41,6 +41,7 @@ obj.arrowFunction(); // Output: 10
 + Argument - When we call a function, the value we pass is called arguments
 
 ## Accepting Infinite Arguments
+### 'arguments' keyword
 ```
 function add(){
   console.log(arguments); // [3, 4, 5, 'er', [1, 2, 3]]
