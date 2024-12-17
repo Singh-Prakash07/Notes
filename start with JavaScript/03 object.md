@@ -6,6 +6,9 @@
     name: "John",  // by key "name" store value "John"
     age: 30        // by key "age" store value 30
     "likes birds": true,  // multiword property name must be quoted
+    objFunction: function(){ // using function in object.
+      console.log("Hello Object");
+    }
     };
   ```
 + A property is a “key: value” pair, where key is a string (also called a “property name”), and value can be anything.
