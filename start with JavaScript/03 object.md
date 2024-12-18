@@ -108,6 +108,20 @@ In real code, we often use existing variables as values for property names.
       };
     }
   ```
++ Creating object using variables;
+```
+let name = 'prakash';
+let age = 24;
+const student = {
+  name,
+  age,
+};
+or
+const student = {
+  name: name,
+  age: age,
+};
+```
 ## Property names limitations
 + As we already know, a variable cannot have a name equal to one of the language-reserved words like “for”, “let”, “return” etc.
 + But for an object property, there’s no such restriction:
