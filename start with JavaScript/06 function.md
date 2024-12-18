@@ -18,6 +18,31 @@ const add = function(num){
 }
 ```
 ## 3. Arrow function
+```
+const print = (parameter<optional>) => {
+  console.log("Hello Arrow Function");
+}
+print();
+```
+## 4. IIFE
++ Immediately Invoked Function Expressions(IIFE)
++ This function runs as soon as it is defined.
++ If we have multiple IIFE use comma(,) between them.
++ first enclosing bracket is definition, second enclosing bracket is execution of same function.
++ It helps to avoid polluting the global namespace.
+```
+(function () {
+  // …
+})();
+
+(() => {
+  // …
+})();
+
+(async () => {
+  // …
+})();
+```
 
 ```
 const obj = {
@@ -39,7 +64,9 @@ obj.arrowFunction(); // Output: 10
 ```
 + Parameter - when we write definition of function, the variable we use to take value is called parameters.
 + Argument - When we call a function, the value we pass is called arguments
-
+## Hoisting
++ we can call(execute) a simple function before its definition, it is called hoisting.
++ It does not work in arrow function, since JS run all simple function first, then other stuff.
 ## Accepting Infinite Arguments
 ### 'arguments' keyword
 ```
