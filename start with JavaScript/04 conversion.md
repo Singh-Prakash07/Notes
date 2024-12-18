@@ -1,4 +1,4 @@
-# string to number
+## string to number
 + we always use captalize name like class_name to convert in differnet data types. 
 ```
   let score = " 55";  // string
@@ -15,12 +15,12 @@
   true      ------> 1
   false      -----> 0
   ```
-# number to string
+## number to string
 ```
   let score = 5;
   score.toString();  // "5"
 ```
-#  string and number to boolean
+## string and number to boolean
 ```
 "" ----> false
 0 -----> false
@@ -30,7 +30,30 @@ null --> false
 undefined-> false
 ```
 
-# Heap and stack Memory
+## Heap and stack Memory
 + Primitive type stored in Stack memory.( variable contains actual value)
 + Non-Primitive type stored in heap memory.( variable contains reference of value(or object, array).
 
+## Control Flow
+
+### Nullish Coalescing Operator(??)
++ This operator check for null or undefined values in a variable.
++ it returns its right-hand side operand when its left-hand side operand is null or undefined, and otherwise returns its left-hand side operand.
+```
+const baz = 0 ?? 42; // 0
+const baz = null ?? 'prakash'; // 'prakash'
+const baz = undefined ?? 42; // 42
+const baz = null ?? 42 ?? undefined; // 42
+const baz = null ?? undefined; // undefined
+const baz =  undefined ?? null; // null
+```
+### Ternary Operator
++ It is the only JS operator that takes three operands: a condition followed by a question mark (?), then an expression to execute if the condition is truthy followed by a colon (:), and finally the expression to execute if the condition is falsy.
+```
+let value = check ? 10 : 20   // if check is true, 10 assign to value else 20 assign.
+```
+### do.. while loop
+```
+do{
+}while(condition);
+```
