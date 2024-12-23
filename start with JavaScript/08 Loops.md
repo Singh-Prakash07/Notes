@@ -1,3 +1,12 @@
+| Loop Type | Arrays (Iterable) | Strings (Iterable) | Objects (Non-Iterable, Enumerable) | Maps/Sets (Iterable) |
+|---|---|---|---|---|
+| **for** | Yes | Yes (by index) | Yes (by index using Object.keys()) | Yes (by index) |
+| **while** | Yes | Yes (by index) | Yes (using conditions based on properties) | Yes (using iterators) |
+| **do...while** | Yes | Yes (by index) | Yes (using conditions based on properties) | Yes (using iterators) |
+| **for...in** | Yes (but not recommended for order-dependent iteration) | Yes (iterates over indices) | Yes (iterates over keys) | No (use for...of) |
+| **for...of** | Yes | Yes | No (unless converted to an iterable) | Yes |
+
+
 ## 1. for loop
   Syntax: `for (initialization; condition; increment/decrement) { // code to be executed }`
 ```
