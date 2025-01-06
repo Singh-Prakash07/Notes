@@ -32,6 +32,15 @@ for (let i = 0; i < myMap.size; i++) {
   console.log(key, myMap.get(key)); 
 }
 ```
+### Set
+```
+const mySet = new Set([1, 2, 3]);
+const setArray = Array.from(mySet); 
+
+for (let i = 0; i < setArray.length; i++) {
+  console.log(setArray[i]); 
+}
+```
 ## 2. do...while loop
 Syntax: do { // code to be executed } while (condition);
 ```
@@ -42,7 +51,65 @@ do {
 } while (i < 5);
 ```
 ## 3. for...in loop
+### String
+```
+const str = "hello";
+for (let i in str) {
+  console.log(str[i]); // Iterates over indices
+}
+```
+### Array (Not recommended) 
+```
+const numbers = [1, 2, 3];
+for (let i in numbers) {
+  console.log(numbers[i]); // Order might not be preserved
+}
+```
+### Object
+```
+const person = { name: "Alice", age: 30 };
+for (const key in person) {
+  console.log(key, person[key]);
+}
+```
 
 ## 4. for...of loop
 Syntax: for (value of iterable) { // code to be executed }
  Iterates over iterable objects (arrays, strings, maps, sets, etc.), accessing the values directly.
+### String
+```
+const str = "hello";
+for (const char of str) {
+  console.log(char);
+}
+```
+### Array
+```
+const numbers = [1, 2, 3];
+for (const number of numbers) {
+  console.log(number);
+}
+```
+### Object (Not directly iterable)
+```
+// Convert Object to an array of entries
+const person = { name: "Alice", age: 30 };
+const entries = Object.entries(person);
+for (const [key, value] of entries) {
+  console.log(key, value);
+}
+```
+### Map
+```
+const myMap = new Map([["a", 1], ["b", 2]]);
+for (const [key, value] of myMap) {
+  console.log(key, value);
+}
+```
+### Set
+```
+const mySet = new Set([1, 2, 3]);
+for (const item of mySet) {
+  console.log(item);
+}
+```
