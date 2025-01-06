@@ -1,3 +1,8 @@
+
++ Objects: for...in (with hasOwnProperty() for own properties)
++ Maps: for...of (iterates over key-value pairs)
++ Sets: for...of (iterates over values)
+
 | Loop Type | Arrays (Iterable) | Strings (Iterable) | Objects (Non-Iterable, Enumerable) | Maps/Sets (Iterable) |
 |---|---|---|---|---|
 | **for** | Yes | Yes (by index) | Yes (by index using Object.keys()) | Yes (by index) |
@@ -70,6 +75,11 @@ for (let i in numbers) {
 const person = { name: "Alice", age: 30 };
 for (const key in person) {
   console.log(key, person[key]);
+}
+for (const key in person) {
+    if (person.hasOwnProperty(key)) {
+        console.log(key, person[key]);
+    }
 }
 ```
 
