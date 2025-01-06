@@ -66,7 +66,7 @@ obj.arrowFunction(); // Output: 10
 + Argument - When we call a function, the value we pass is called arguments
 ## Hoisting
 + we can call(execute) a simple function before its definition, it is called hoisting.
-+ It does not work in arrow function, since JS run all simple function first, then other stuff.
++ It does not work in expression fn or arrow function, since JS run all simple function first, then other stuff.
 ## Accepting Infinite Arguments
 ### 'arguments' keyword
 ```
