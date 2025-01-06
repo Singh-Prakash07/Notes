@@ -1,14 +1,13 @@
 | Loop Type | Arrays (Iterable) | Strings (Iterable) | Objects (Non-Iterable, Enumerable) | Maps/Sets (Iterable) |
 |---|---|---|---|---|
 | **for** | Yes | Yes (by index) | Yes (by index using Object.keys()) | Yes (by index) |
-| **while** | Yes | Yes (by index) | Yes (using conditions based on properties) | Yes (using iterators) |
-| **do...while** | Yes | Yes (by index) | Yes (using conditions based on properties) | Yes (using iterators) |
 | **for...in** | Yes (but not recommended for order-dependent iteration) | Yes (iterates over indices) | Yes (iterates over keys) | No (use for...of) |
 | **for...of** | Yes | Yes | No (unless converted to an iterable) | Yes |
 
 
 ## 1. for loop
   Syntax: `for (initialization; condition; increment/decrement) { // code to be executed }`
+### String, Array
 ```
 const myString = "Hello, world!";
 
@@ -17,17 +16,23 @@ for (let i = 0; i < myString.length; i++) {
   console.log(myString[i]); // Output: Each character of the string
 }
 ```
-## 2. while loop
-  Syntax: `while (condition) { // code to be executed }`
+### Object
 ```
-const myArray = [10, 20, 30, 40, 50];
-let index = 0;
-while (index < myArray.length) {
-  console.log(myArray[index); // print all element of array
-  index++;
+const person = { name: "Alice", age: 30 };
+for (let i = 0; i < Object.keys(person).length; i++) {
+  const key = Object.keys(person)[i];
+  console.log(key, person[key]); 
 }
 ```
-## 3. do...while loop
+### Map
+```
+const myMap = new Map([["a", 1], ["b", 2]]);
+for (let i = 0; i < myMap.size; i++) {
+  const key = Array.from(myMap.keys())[i];
+  console.log(key, myMap.get(key)); 
+}
+```
+## 2. do...while loop
 Syntax: do { // code to be executed } while (condition);
 ```
 let i = 0;
@@ -36,8 +41,8 @@ do {
   i++;
 } while (i < 5);
 ```
-## 4. for...in loop
+## 3. for...in loop
 
-## 5. for...of loop
+## 4. for...of loop
 Syntax: for (value of iterable) { // code to be executed }
  Iterates over iterable objects (arrays, strings, maps, sets, etc.), accessing the values directly.
