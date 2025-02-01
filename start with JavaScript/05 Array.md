@@ -103,8 +103,28 @@ console.log(Array.from([1, 2, 3], (x) => x + x));// [2, 4, 6]
 5. Suppose we have 4-5 variable and want to create an array. `Array.of(element1, element2, /* …, */ elementN)`
 6. etc..
 
-
-
+## Arrays High Order Function
+### 1. forEach
++ it didn't return anything, instead excute fn on each element of array.
+```
+const arr = [1, 2, 3];
+arr.forEach((val) => console.log(val));   // 1  2  3
+function print(n){
+ console.log(n);
+}
+arr.forEach(print)  // 1  2   3
+```
+### 2. map
++ When we need to create a new modify array from existing one.
++ It returns new array.
+```
+const newArr = arr.map(val => val*2);   // 2  4  6
+```
+### 3. filter
++ It return new array after filtering existing array.
+```
+const newArr = arr.filter((val) => val % 2 == 0); // an array of even numbers only.
+```
 
 
 
