@@ -24,7 +24,23 @@ const print = (parameter<optional>) => {
 }
 print();
 ```
-## 4. IIFE
+
+## 4. High order function
++ High order fn => functions take functions as arguments (callbacks) or return functions. 
++ A callback function is a function that is passed as an argument to another function (often a higher-order function) and is executed after the outer function has finished its work.  It's a way to handle asynchronous operations or to customize the behavior of a function.
+```
+function operate(func, a, b) {
+  return func(a, b);
+}
+
+function add(a, b) {
+  return a + b;
+}
+
+const result = operate(add, 5, 3); // result is 8
+```
++ `operate` is high order fn and `add` is callback fn
+## 5. IIFE
 + Immediately Invoked Function Expressions(IIFE)
 + This function runs as soon as it is defined.
 + If we have multiple IIFE use comma(,) between them.
@@ -91,4 +107,3 @@ function add(...number){
 console.log(add(1, 2, 3, 4, 5, 6, 7) // 28
 function add(number1, number2, ... number) // number1->1, number2->2, number->[3, 4, 5, 6, 7]
 ```
-###
