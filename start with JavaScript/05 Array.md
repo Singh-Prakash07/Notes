@@ -125,6 +125,13 @@ const newArr = arr.map(val => val*2);   // 2  4  6
 ```
 const newArr = arr.filter((val) => val % 2 == 0); // an array of even numbers only.
 ```
+### 4. reduce
++ reduce applies a function cumulatively to the items of an array, reducing it to a single value.
+```
+[1, 2, 3, 4].reduce((accumulator, currentValue) => accumulator + currentValue, 0)
+```
++ accumulator stores the running total (starts at 0), and currentValue is the current element.  The function returns the updated total, which becomes the next accumulator.
++ The final result is 10.
 
 
 
