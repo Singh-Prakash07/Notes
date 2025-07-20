@@ -22,7 +22,9 @@ Writing JS within HTML file	External Linking     // linking external JS file in 
 ```
 
 2.	In Node JS complier
-3.	In browser's console
+  ``` node filename.js```
+4.	In browser's console
+```right click choose inspect then console```
 ## Use of var, let, const
 ###	var
   -	globally scoped
