@@ -106,7 +106,7 @@ const bigInt = 1234567890123456789012345678901234567890n;
  ```
 
 ## 3. String
-
++ string is sequence of character in js, mean we can access a character using index.
 + A string in JavaScript must be surrounded by quotes.
 
 ```
@@ -119,7 +119,7 @@ In JavaScript, there are 3 types of quotes.
 1.  Double quotes: `"Hello"`.
 2.  Single quotes: `'Hello'`.
 3.  Backticks: `` `Hello` ``.
-4.  class:     `let str = new String('string');` // we don't more often this method.
+4.  class:     `let str = new String('string');` // we don't use this method generally.
 
 + Double and single quotes are “simple” quotes. There’s practically no difference between them in JavaScript.
 + Backticks are “extended functionality” quotes. They allow us to embed variables and expressions into a string by wrapping them in `${…}`, for example:
