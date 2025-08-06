@@ -6,6 +6,7 @@ There are two syntaxes for creating an empty array:
 ```
 let arr = new Array();
 let arr = new Array(5);  // creates an array of length 5.
+const arr = new Array(1, 2, 3,, 4, 5); // [1, 2, 3, 4, 5]
 let arr = []; // Mostly we use this syntax.
 let arr = [ 'Apple', { name: 'John' }, true, function() { alert('hello'); }, ]; // “trailing comma” style
 ```
