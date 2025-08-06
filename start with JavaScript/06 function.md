@@ -23,6 +23,33 @@ const print = (parameter<optional>) => {
   console.log("Hello Arrow Function");
 }
 print();
+const add = () => a+b; // one liner, it returns sum of a and b.
+```
+### This Keyword
+
+```
+const obj = {
+  value: 10,
+regular : function(){
+    console.log(this.value); // 'this' refers to the 'obj' output is 10.
+  },
+  arrow : () =>{
+    console.log(this.value); // 'this' refers to the global object (window in browsers) or undefined in strict mode, output is undefined.
+  },
+  regularFunction: function() {
+    setTimeout(function() {
+      console.log(this.value); // 'this' inside setTimeout refers to the global object (window in browsers) or undefined in strict mode
+    }, 1000);
+  },
+  arrowFunction: function() {
+    setTimeout(() => {
+      console.log(this.value); // 'this' inside setTimeout refers to the 'obj' because arrow function does not bind its own this
+    }, 1000);
+  },
+};
+
+obj.regularFunction(); // Output: undefined (or a value from the global scope if not in strict mode)
+obj.arrowFunction(); // Output: 10
 ```
 
 ## 4. High order function
@@ -58,25 +85,6 @@ const result = operate(add, 5, 3); // result is 8
 (async () => {
   // …
 })();
-```
-
-```
-const obj = {
-  value: 10,
-  regularFunction: function() {
-    setTimeout(function() {
-      console.log(this.value); // 'this' inside setTimeout refers to the global object (window in browsers) or undefined in strict mode
-    }, 1000);
-  },
-  arrowFunction: function() {
-    setTimeout(() => {
-      console.log(this.value); // 'this' inside setTimeout refers to the 'obj' because arrow function does not bind its own this
-    }, 1000);
-  },
-};
-
-obj.regularFunction(); // Output: undefined (or a value from the global scope if not in strict mode)
-obj.arrowFunction(); // Output: 10
 ```
 + Parameter - when we write definition of function, the variable we use to take value is called parameters.
 + Argument - When we call a function, the value we pass is called arguments
