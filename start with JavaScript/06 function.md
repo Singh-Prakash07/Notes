@@ -3,7 +3,7 @@
 
 function myFun(unlimited_parameters<optional>){ there is no any return type
   // code
-} we could any number of parameters.
+} we could have any number of parameters.
 eg. function myFun(){}; // without parameter
     function myFun(parameter1, parameter2){}// this function accepting two parameters.
 
