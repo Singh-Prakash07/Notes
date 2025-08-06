@@ -80,7 +80,7 @@ for (let key in arr) { // we shouldn’t use for..in for arrays, since it use in
 + `const arr = [1, 2, 3, 4, 5]`
 + `arr.includes(4)` // true  -->return true if 4 exits in array else false.
 + `arr.indexOf(4)` // 3  -->return the first index of 4, return -1 if 4 not exits in array.
-+ `arr.join()` // "1,2,3,4,5"
++ `arr.join()` // "1,2,3,4,5" , it return string joining all element of array.
 + `arr.join("-")` //'1-2-3-4-5'
 + `arr.slice(1, 3)` //`[2, 3]` returns a new array including index 1 to 2. without changing original array.
 + `arr.splice(1, 3)` // `[2, 3, 4]` it return a new array including index 1 to 3. but removes these element from original array.
