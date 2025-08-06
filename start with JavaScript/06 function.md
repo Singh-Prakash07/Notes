@@ -93,7 +93,7 @@ function add(){
 arr = [1, 2, 3];
 add(3, 4, 5, 'er', arr);
 ```
-### Rest operator 
+### Rest Parameter
 + accepting multiple values using one variable in function
 + It works in all function either simple or arrow function.
 ```
