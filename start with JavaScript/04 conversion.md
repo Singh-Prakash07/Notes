@@ -20,6 +20,7 @@
   let score = 5;
   Console.log(String(score)); // "5", It handles null and undefined value as 'null', 'undefined'.
   score.toString();  // "5", throw typeError for null and undefined value.
+  score.toString(2); // "101" convert and store in binary string.
   Console.log(""+score); // "5", null+5 = 5, undefined+5 = NaN.
 ```
 ## string and number to boolean
