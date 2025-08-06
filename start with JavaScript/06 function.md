@@ -86,7 +86,7 @@ obj.arrowFunction(); // Output: 10
 ## Accepting Infinite Arguments
 ### 'arguments' keyword
 ```
-function add(){
+function add(){ // we do not write 'arguments' keyword as argument of function.
   console.log(arguments); // [3, 4, 5, 'er', [1, 2, 3]]
   console.log(arguments[arguments.length-1][2]; // 2
 }
@@ -107,3 +107,8 @@ function add(...number){
 console.log(add(1, 2, 3, 4, 5, 6, 7) // 28
 function add(number1, number2, ... number) // number1->1, number2->2, number->[3, 4, 5, 6, 7]
 ```
+| Feature	| arguments Keyword	| Rest Parameters (...) |
+|----------|----------|----------|
+| Type	| Array-like object	| True Array |
+| Methods	| No direct array methods (needs conversion) except length and index based access | All array methods available directly |
+| Arrow Functions |	Not available	| Available |
