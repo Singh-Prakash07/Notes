@@ -85,6 +85,7 @@ obj.arrowFunction(); // Output: 10
 + It does not work in expression fn or arrow function, since JS run all simple function first, then other stuff.
 ## Accepting Infinite Arguments
 ### 'arguments' keyword
++ Every function except arrow have build in arguments keyword which contains all the parameters passed to this function, it does matter we have used variable to catch parameter, arguments object also catch all the parameters.
 ```
 function add(){ // we do not write 'arguments' keyword as argument of function.
   console.log(arguments); // [3, 4, 5, 'er', [1, 2, 3]]
@@ -112,3 +113,26 @@ function add(number1, number2, ... number) // number1->1, number2->2, number->[3
 | Type	| Array-like object	| True Array |
 | Methods	| No direct array methods (needs conversion) except length and index based access | All array methods available directly |
 | Arrow Functions |	Not available	| Available |
+## spread operator(...array/set/object/etc)
++ The spread operator (...) is a modern syntax (introduced in ES6) that allows an iterable (like an array, string, or Set) to be expanded into its individual elements.
++ When we use the spread operator to copy an array or an object, it performs a shallow copy.
+  + For primitive values (like numbers, strings, booleans), the spread operator copies the actual value.
+  + For non-primitive values (like nested objects or arrays), the spread operator copies the reference to that nested value.
+```
+const originalArray = [1, 2, 3]; // array
+const copiedArray = [...originalArray];
+
+const defaults = { theme: 'dark', notifications: true };
+const userSettings = { notifications: false, language: 'en' };
+const finalSettings = { ...defaults, ...userSettings, debugMode: true }; // object
+
+functionName(...iterable) // In function calls:
+```
+## Shallow Copy
++  shallow copy creates a new object or array, but it only copies the top-level elements or properties. If the original object or array contains nested objects or arrays, the shallow copy will not create new copies of these nested structures. Instead, it will copy their references.
++  Implication: If you modify a nested object or array within the shallow copy, the original object/array will also be affected because both the original and the copy are pointing to the same underlying nested data in memory.
+
+## Deep Copy
++ creates a completely new object or array and recursively duplicates all levels of the original structure, including all nested objects and arrays.
++ The deep copy is entirely independent of the original. Changes made to any part of the deep copy (even nested elements) will not affect the original object or array.
++ For a true **deep copy** (where all nested structures are also duplicated), you would typically use methods like `JSON.parse(JSON.stringify(obj))` (with limitations) or a dedicated deep-cloning library, or the modern `structuredClone()` API.
