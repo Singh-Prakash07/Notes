@@ -117,17 +117,44 @@ arr.forEach(print)  // 1  2   3
 ```
 ### 2. map
 + When we need to create a new modify array from existing one.
-+ It returns new array.
++ It returns new array and does not modigy original array.
++ Syntax
+```
+array.map(callback(currentValue, index, array), thisArg)
+        
+callback: A function to execute on each element. It can take up to three arguments:
+currentValue: The current element being processed in the array.
+index (optional): The index of the current element being processed.
+array (optional): The array `map()` was called upon.
+thisArg (optional): Value to use as `this` when executing `callback`.
+```
++ Example :
+```
+const arr1 = new Array(5).fill(0).map((_, i) => i + 1); // arr1 = [1, 2, 3, 4, 5]
+```
++ the underscore _ is a common convention in JavaScript to indicate a function parameter that is intentionally ignored. It's a placeholder for an argument that the developer doesn't need or plan to use.
++ The first parameter, _, corresponds to the currentValue from the array (which is 0 in every iteration). The developer doesn't need this value, so they use _ as a clear signal to others reading the code that it's being ignored.
++ The second parameter, i, corresponds to the index of the current element being processed (0, then 1, then 2, etc.). This is the value the developer actually wants to use. 
++ The expression i + 1 returns the index plus one.
 ```
 const newArr = arr.map(val => val*2);   // 2  4  6
 ```
 ### 3. filter
 + It return new array after filtering existing array.
++ Syntax
+```
+array.reduce(callback(accumulator, currentValue, index, array), initialValue);
+
+accumulator: The value returned from the last callback execution. For the first iteration, it's              the `initialValue` you provide (or the first element of the array).
+currentValue: The current element being processed.
+index (optional): The index of the current element.
+array (optional): The array `reduce()` was called upon.
+```
 ```
 const newArr = arr.filter((val) => val % 2 == 0); // an array of even numbers only.
 ```
 ### 4. reduce
-+ reduce applies a function cumulatively to the items of an array, reducing it to a single value.
++ The `reduce()` method executes a **reducer function** on each element of the array, resulting in a single output value.
 ```
 [1, 2, 3, 4].reduce((accumulator, currentValue) => accumulator + currentValue, 0)
 ```
