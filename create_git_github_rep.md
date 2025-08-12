@@ -41,7 +41,17 @@ This is the final and most crucial step. It sends your local commits to GitHub. 
 6.to verify if your remote connection (the URL) has been set up correctly. You can confirm everything looks good!
 ```
 git remote -v
-``` 
+```
+# disclaimer
++ An error often happen if you created a repository on GitHub with a README file or a license, but you haven't pulled those files down to your local machine yet.
+
++ To fix this, you need to pull the changes from the remote repository before you can push your own work.
+1. Pull the changes from the remote repository: This command will fetch the latest changes from the remote main branch and merge them into your local main branch.
+
+Bash
+git pull origin main
+You might see a message about merging, which is normal. Git will automatically try to combine the files.
+
 ### push pull 
 
   // 1. After adding your local repo on github each time you do the changes in your local repo
