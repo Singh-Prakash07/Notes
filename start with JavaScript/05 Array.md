@@ -164,6 +164,9 @@ console.log(Array.from([1, 2, 3], (x) => x + x));// [2, 4, 6]
 
 ## Arrays High Order Function
 1. forEach
+```
+array.forEach(callback(currentValue, index, array), thisArg)
+```
 + it didn't return anything, instead excute fn on each element of array.
 + forEach() is non-mutating. It doesn't change the original array.
 + Using forEach itself does not inherently mutate the array on which it is called. forEach is a loop that iterates through each element of an array and executes a callback function for each one. The key point is that it's what you do inside the callback function that determines if the original array is mutated.
@@ -223,6 +226,12 @@ const newArr = arr.map(val => val*2);   // 2  4  6
 + It return new array after filtering existing array.
 + Syntax
 ```
+array.filter(callback(element, index, array), thisArg)
+const newArr = arr.filter((val) => val % 2 == 0); // an array of even numbers only.
+```
+### reduce
++ The `reduce()` method executes a **reducer function** on each element of the array, resulting in a single output value.
+```
 array.reduce(callback(accumulator, currentValue, index, array), initialValue);
 
 accumulator: The value returned from the last callback execution. For the first iteration, it's              the `initialValue` you provide (or the first element of the array).
@@ -230,11 +239,6 @@ currentValue: The current element being processed.
 index (optional): The index of the current element.
 array (optional): The array `reduce()` was called upon.
 ```
-```
-const newArr = arr.filter((val) => val % 2 == 0); // an array of even numbers only.
-```
-### reduce
-+ The `reduce()` method executes a **reducer function** on each element of the array, resulting in a single output value.
 ```
 [1, 2, 3, 4].reduce((accumulator, currentValue) => accumulator + currentValue, 0)
 ```
