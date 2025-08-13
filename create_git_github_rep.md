@@ -42,8 +42,8 @@ This is the final and most crucial step. It sends your local commits to GitHub. 
 ```
 git remote -v
 ```
-# disclaimer
-+ An error often happen if you created a repository on GitHub with a README file or a license, but you haven't pulled those files down to your local machine yet.
+> [!Note]
+> An error often happen if you created a repository on GitHub with a README file or a license, but you haven't pulled those files down to your local machine yet.
 
 + To fix this, you need to pull the changes from the remote repository before you can push your own work.
 1. Pull the changes from the remote repository: This command will fetch the latest changes from the remote main branch and merge them into your local main branch.
@@ -53,12 +53,11 @@ git pull origin main
 You might see a message about merging, which is normal. Git will automatically try to combine the files.
 
 ### push pull 
-
-  // 1. After adding your local repo on github each time you do the changes in your local repo
-        you need to do commit for local git then after you use command(git push origin master)
-        to push locally changed`project to show that changes on github.
-     2. And if your collaborator done changes then you need to pull from github before to further changes
-        and you use command (git pull origin master) only then that change from git show on your local project.
+1. After adding your local repo on github each time you do the changes in your local repo
+	you need to do commit for local git then after you use command(git push origin master)
+	to push locally changed`project to show that changes on github.
+2. And if your collaborator done changes then you need to pull from github before to further changes
+	and you use command (git pull origin master) only then that change from git show on your local project.
 19.==========================clone===============================
 
 	// 1.How to make clone of github repo in local and make changes.
