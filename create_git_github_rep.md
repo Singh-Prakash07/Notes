@@ -58,7 +58,8 @@ You might see a message about merging, which is normal. Git will automatically t
 	to push locally changed`project to show that changes on github.
 2. And if your collaborator done changes then you need to pull from github before to further changes
 	and you use command (git pull origin master) only then that change from git show on your local project.
-19.==========================clone===============================
+
+### clone
 
 	// 1.How to make clone of github repo in local and make changes.
 	// 2.git clone https://github.com/..........
