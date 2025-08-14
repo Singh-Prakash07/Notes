@@ -212,6 +212,10 @@ thisArg (optional): Value to use as `this` when executing `callback`.
 + Example :
 ```
 const arr1 = new Array(5).fill(0).map((_, i) => i + 1); // arr1 = [1, 2, 3, 4, 5]
+another example
+arrayString.split(' ').map((str) => Number(str));
+   // both are same
+arrayString.split(' ').map(Number);
 ```
 + the underscore _ is a common convention in JavaScript to indicate a function parameter that is intentionally ignored. It's a placeholder for an argument that the developer doesn't need or plan to use.
 + The first parameter, _, corresponds to the currentValue from the array (which is 0 in every iteration). The developer doesn't need this value, so they use _ as a clear signal to others reading the code that it's being ignored.
