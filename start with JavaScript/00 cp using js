@@ -1,0 +1,22 @@
+#Taking input in js
++ let see how to take array as input.
+```
+process.stdin.on('data', (data) => {
+  // Convert the input Buffer to a string and split it by lines.
+  const lines = data.toString().trim().split('\n');
+  // Assuming the array is on the second line (index 1).
+  // The first line often contains the size of the array.
+  const arrayString = lines[1];
+  // Split the line by spaces and convert each string element to a number.
+  const inputArray = arrayString.split(' ').map(Number);
+  // Now you can use inputArray in your solution.
+  console.log(inputArray); // Example output: [1, 2, 3, 4, 5]
+});
+```
+1. Read All Input: The process.stdin.on('data', ...) listener reads the entire input from the command line. This is the most efficient way for CP.
+2. Parse to String: The data object is a Buffer, so you must convert it to a string with .toString(). We also use .trim() to remove any extra whitespace.
+3. Split by Lines: The .split('\n') method breaks the input into an array of strings, where each element is a line from your input.
+4. Isolate the Array Line: You'll need to know which line contains the array.
+#### Exit from a program
++ `process.exit();`
+
