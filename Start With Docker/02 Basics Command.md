@@ -34,6 +34,10 @@ Press Ctrl + p followed by Ctrl + q`.
 + To delete an image, use docker rmi <image_id_or_name>.
 + Before removing image we must have to delete all containers of that image.
 
+### exec command
++ The docker exec command is used to run a command in a running Docker container. It's the primary way to interact with a container that's already started, without creating a new one.
++ It's often used to debug an application inside a container, get a shell, or run a one-off command.
++ `docker exec [OPTIONS] <container_name_or_id> <command> [ARG...]`
 ### Docker Command 
 + Docker commands are organized into different groups, each managing a specific type of Docker object. This modern structure helps organize a large number of commands under a clear, intuitive hierarchy.
 + The general syntax for all Docker commands is:
