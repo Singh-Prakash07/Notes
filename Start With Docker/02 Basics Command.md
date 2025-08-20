@@ -6,7 +6,9 @@
 4.  Whenever we run an image it always create a new container.
 5.  how to find images
 ```
-docker images  // list all images along with (REPOSITORY name, TAG, IMAGE ID, CREATED, SIZE)
+dockerimage ls
+OR
+docker images // list all images with (REPOSITORY name, TAG, IMAGE ID, CREATED, SIZE)
 ```
 6. To remove an image we first need to delete all its container.
 
