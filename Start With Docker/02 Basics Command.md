@@ -19,9 +19,11 @@ docker images // list all images with (REPOSITORY name, TAG, IMAGE ID, CREATED, 
 3. `docker container ls -a -s` or `docker ps -a -s` to list all containers along with size.
 
 ### To stop an container
-1. Graceful Shutdown (docker stop) `docker stop <container_name_or_id>`.
-2. Forceful Termination (docker kill) `docker kill <container_name_or_id>`.
+1. Graceful Shutdown (docker stop) `docker stop <container_name_or_id>`using second terminal.
+2. Forceful Termination (docker kill) `docker kill <container_name_or_id>` using second terminal.
 3. `exit` to exit an bash terminal in a container.
+4. If the exit command isn't working, it's likely because the container's main process isn't an interactive shell. When a container runs a command other than a shell (like a web server or a database), the exit command won't work because it's not a valid command for that process.
+5. This allows the container's process to continue without being tied to your terminal and your terminal get free then u can use command to stop that container.`Press Ctrl + p followed by Ctrl + q`.
 
 ### Detach from the Container
 + + If you want to leave the container running in the background, you can detach from it.
