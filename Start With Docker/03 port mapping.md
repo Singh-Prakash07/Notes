@@ -28,3 +28,43 @@ docker run -d -p 8080:80 nginx
 + When you run a container without the -d flag, the container's output is streamed directly to your terminal. Your terminal will be busy and you won't be able to enter other commands until the container's main process finishes.
 + However, when you use the -d flag, Docker starts the container and immediately sends it to the background. Your terminal is then freed up, and you can continue to use it for other commands. This is perfect for running services like web servers that are designed to run continuously
 + without -d `docker run -p 80:80 nginx`. 
+
+### Enviroment Variable
++ An environment variable is a dynamic-named value that can influence the behavior of processes running on a computer. They are a way to pass configuration settings from the outside (the operating system or shell) into an application without hard-coding those values.
+
++ For example, instead of writing your application's code with a specific database password, you can use an environment variable named DB_PASSWORD. When the application starts, it reads the value from this variable. This makes it easy to change the password or other settings without modifying the code itself.
+
++ Docker containers are designed to be portable and reusable. Environment variables are a key tool for achieving this, as they allow you to customize a container's configuration without rebuilding the image.
+### 1. The ENV Instruction in a Dockerfile
++ The ENV instruction in a Dockerfile sets an environment variable during the image build process. This variable will be available to all subsequent build steps and to any running container created from the image.
++ Syntax: `ENV <key>=<value>`
+ ```
+# Dockerfile
+FROM node:18
+WORKDIR /app
+COPY . .
+# Set the environment variable for the application
+ENV NODE_ENV=production
+CMD ["node", "server.js"]
+```
++ In this example, the NODE_ENV variable is set to production for any container created from this image.
+
+### 2.  The -e or --env Flag in docker run
++ The most common way to use environment variables is by passing them at runtime with the docker run command. This overrides any variables that were set in the Dockerfile.
++ Syntax: docker run -e <key>=<value> <image_name>
+```
+docker run -e DB_HOST=192.168.1.100 my-web-app
+```
++ This command passes the DB_HOST variable with the value 192.168.1.100 to the my-web-app container.
++ This approach is highly useful for managing sensitive information like passwords or API keys, as you can avoid hard-coding them in your Dockerfile and pass them securely at runtime.
+### 3. The --env-file Flag
++ For managing a large number of environment variables, you can store them in a file and pass the entire file to the container using the --env-file flag.
++ Syntax: docker run --env-file <file_path> <image_name>
++ First, create a file named db.env:
+```
+# db.env
+DB_USER=root
+DB_PASSWORD=secret
+DB_NAME=mydatabase
+```
++ Then, run the container:` docker run --env-file ./db.env my-db-client`
