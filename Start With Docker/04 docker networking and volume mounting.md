@@ -29,3 +29,33 @@
 + `docker network inspect bridge(name of network)`: Provides detailed information about a network, including which containers are connected to it.
 + `docker network connect`: Connects a running container to a network.
 + `docker network disconnect`: Disconnects a container from a network.
+
+### volume mounting
++ Volumes are the preferred method for persisting data in Docker. They provide a way to store data outside of a container's writable layer, which is essential for preserving data even if the container is stopped, removed, or replaced
++ A volume is a special directory on the host machine that is mounted into a container's filesystem. It's managed entirely by Docker. Unlike bind mounts, which can link any directory on the host, volumes are created and managed with Docker commands, making them more portable and secure.
+### Types of Volumes
+### 1. Named Volumes
++ Named volumes are the most common type. They are managed by Docker and stored in a specific directory on the host `(/var/lib/docker/volumes/` on Linux). You reference them by a unique name.
++ Best for: Storing database files, application state, and persistent data that needs to be backed up or shared between multiple containers.
++ Command: `docker run -v <volume_name>:<container_path> <image_name>`
++ Example:
+```
+# Create a volume named 'db_data' and mount it to /var/lib/mysql in the container
+docker run --name my-mysql -v db_data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=secret -d mysql
+```
++ This command ensures that even if you delete the my-mysql container, the database data stored in the db_data volume will remain.
+
+### 2. Anonymous Volumes
++ Anonymous volumes are similar to named volumes but are not given an explicit name. They are managed by Docker but can be harder to reference and clean up.
++ Best for: Temporary data storage where the data doesn't need to be persisted for long.
++ Command: `docker run -v <container_path> <image_name>`
++ Example: `docker run -it -v /app/data ubuntu bash`
++ This command creates an anonymous volume and mounts it at /app/data inside the container.
+
+### Volume Commands
++ docker volume create <name>: Creates a named volume.
++ docker volume ls: Lists all volumes.
++ docker volume inspect <name>: Shows detailed information about a volume.
++ docker volume rm <name>: Removes a volume.
++ docker volume prune: Removes all unused local volumes to free up disk space.
+
