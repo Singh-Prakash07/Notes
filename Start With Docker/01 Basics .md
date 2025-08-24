@@ -101,3 +101,8 @@ networks:
 4. View logs from all services: `docker compose logs`
 5. Run a one-off command in a service: `docker compose run web npm test`
 + In short, Docker Compose takes the pain out of managing complex, multi-container applications by treating your entire setup as a single unit. It's the essential next step after you've mastered creating a single Docker image.
+
+|Command | Primary Action |	Goal / Purpose	| Output |
+|-------|-----------------|-----------------|--------|
+| `docker compose build`	| Builds the Docker image(s). |	To create the reusable, static image that contains your application and its dependencies. |	One or more Docker Images stored locally. No containers are started. |
+| `docker compose up` |	Runs the application stack.	 |To create and start the live, running containers based on the images, applying runtime settings (ports, volumes, networks).	| One or more running Docker Containers. |
