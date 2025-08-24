@@ -106,3 +106,15 @@ networks:
 |-------|-----------------|-----------------|--------|
 | `docker compose build`	| Builds the Docker image(s). |	To create the reusable, static image that contains your application and its dependencies. |	One or more Docker Images stored locally. No containers are started. |
 | `docker compose up` |	Runs the application stack.	 |To create and start the live, running containers based on the images, applying runtime settings (ports, volumes, networks).	| One or more running Docker Containers. |
+### creating image using compose file
+```
+version: '3.8'
+
+services:
+  web:
+    # This line tells Docker Compose to build the image from the
+    # Dockerfile in the current directory.
+    build: .
+    # This line tags the resulting image with the specified name.
+    image: my-web-app:1.0
+```
