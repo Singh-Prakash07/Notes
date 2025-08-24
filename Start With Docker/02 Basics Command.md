@@ -26,8 +26,8 @@ docker images // list all images with (REPOSITORY name, TAG, IMAGE ID, CREATED, 
 5. This allows the container's process to continue without being tied to your terminal and your terminal get free then u can use command to stop that container.`Press Ctrl + p followed by Ctrl + q`.
 
 ### Detach from the Container
-+ + If you want to leave the container running in the background, you can detach from it.
-+ + This allows the container's process to continue without being tied to your terminal.`
++ If you want to leave the container running in the background, you can detach from it.
++ This allows the container's process to continue without being tied to your terminal.`
 Press Ctrl + p followed by Ctrl + q`.
 + `docker stop <container_id_or_name>` to stop it.
 ### Deleting Images and Containers
@@ -35,6 +35,8 @@ Press Ctrl + p followed by Ctrl + q`.
 + To delete a container, use docker rm <container_id_or_name>.
 + To delete an image, use docker rmi <image_id_or_name>.
 + Before removing image we must have to delete all containers of that image.
++ To delete all stopped container `docker container prune`.
++ To automatically delete a container on exit (good for one-off runs):`docker run --rm my-image`.
 
 ### exec command
 + The docker exec command is used to run a command in a running Docker container. It's the primary way to interact with a container that's already started, without creating a new one.
