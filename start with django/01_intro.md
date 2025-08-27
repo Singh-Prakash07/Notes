@@ -8,7 +8,7 @@
 | OS| Window| Linux |
 |---|---|---|
 | Install vitual enviroment | `pip install virtualenv`| `pip3 install virtualenv` |
-|create venv| `python -m .venv` | `python3 -m django_venv` |
+|create venv| `python -m venv .venv` | `python3 -m venv django_venv` |
 |activate venv|`.venv\Scripts\activate` | `django_venv/bin/activate` |
 |deactivate venv| `deactivate` | `deactivate` |
 | Install django | `pip install django` | `pip install django` |
