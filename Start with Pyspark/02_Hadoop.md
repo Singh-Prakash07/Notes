@@ -9,11 +9,11 @@ critical part of the modern big data ecosystem.
 
 ## The Hadoop Ecosystem
 
-Hadoop is more than a single tool; it's a collection of services. The core components are:
+Hadoop is more than a single tool; it's a collection of services. The core components design and developed in layers:
 
 * **Hadoop Distributed File System (HDFS):** The distributed storage layer.
 * **Yet Another Resource Negotiator (YARN):** The resource management and scheduling layer( cluster operating system).
-* **MapReduce:** The original processing engine(distributed computing).
+* **MapReduce:** The original processing engine layer(distributed computing).
 ---
 
 ## 1. Hadoop Distributed File System (HDFS)
