@@ -26,5 +26,5 @@
         + In termux write given command ` pkg update && pkg install openssh `.
         + in next step write ` ssh username@laptop-IP-address` eg. if username is `alex` then `ssh alex@192.168.200.100` press enter
         + first time SSH ask if want to accept the server's fingerprint. Type `yes` and press enter.
-        + then inter ubuntu password and after entering it. you'll logged into your ubuntu laptop via ssh.
+        + then enter ubuntu password and after entering it. you'll logged into your ubuntu laptop via ssh.
         
