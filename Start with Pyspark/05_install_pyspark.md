@@ -15,7 +15,8 @@
 1. Spark Database and SQL
 2. Spark DataFrame and API
 
-> [!Note] A DataFrame and a Table are two distinct ways to interact with structured data in a data processing system like Apache Spark
+> [!Note]
+> A DataFrame and a Table are two distinct ways to interact with structured data in a data processing system like Apache Spark.
 
 ### Apache Spark's Data and SQL Offerings
 
