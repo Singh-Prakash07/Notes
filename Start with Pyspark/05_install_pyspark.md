@@ -15,16 +15,16 @@
 1. Spark Database and SQL
 2. Spark DataFrame and API
 
-# Apache Spark's Data and SQL Offerings
+### Apache Spark's Data and SQL Offerings
 
 Apache Spark is a unified analytics engine designed for large-scale data processing. It provides powerful APIs for interacting with structured and unstructured data, with a strong focus on performance and ease of use.
 
-## 1. Spark SQL and the Database Interface
+### 1. Spark SQL and the Database Interface
 
 Spark SQL is a Spark module for working with structured data. It provides two primary ways to interact with data:
 
-* **DataFrame and Dataset APIs:** These are high-level, language-integrated APIs that allow you to programmatically build data transformations. They are the most common way to use Spark for data processing.
-* **SQL Interface:** Spark SQL allows you to write standard SQL queries against your data. It supports a wide range of SQL features, including joins, aggregations, and subqueries.
+1 **DataFrame and Dataset APIs:** These are high-level, language-integrated APIs that allow you to programmatically build data transformations. They are the most common way to use Spark for data processing.
+2 **SQL Interface:** Spark SQL allows you to write standard SQL queries against your data. It supports a wide range of SQL features, including joins, aggregations, and subqueries.
 
 ### Key Concepts:
 
@@ -119,7 +119,7 @@ A **Spark Table** (also known as a **Managed Table** or **External Table**) is a
 
 ## 3. Comparison Table
 
-| Feature | Spark DataFrame | Spark Table |
+| Feature | Spark DataFrame | Spark Table(SQL Table) |
 | :--- | :--- | :--- |
 | **Primary Use**| Data transformation, ETL/ELT pipelines, programmatic data analysis. | Persistent data storage, SQL querying, sharing data across applications. |
 | **Nature** | **In-memory** abstraction. | **Persistent** metadata abstraction over stored files. |
