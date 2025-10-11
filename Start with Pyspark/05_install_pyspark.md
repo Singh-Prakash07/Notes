@@ -126,7 +126,7 @@ A **Spark Table** (also known as a **Managed Table** or **External Table**) is a
 | :--- | :--- | :--- |
 | **Primary Use**| Data transformation, ETL/ELT pipelines, programmatic data analysis. | Persistent data storage, SQL querying, sharing data across applications. |
 | **Nature** | **In-memory** abstraction. | **Persistent** metadata abstraction over stored files. |
-| **Creation Method** | Via programmatic code (e.g., `spark.read.csv()`, `df.groupBy()`). | Via **SQL** (`CREATE TABLE ...`) or DataFrame action (`df.write.saveAsTable()`). |
+| **Creation Method** | Via programmatic code (e.g., `spark.read.csv()`, `df.groupBy()`, `.read`, `.withColumn, .join`). | Via **SQL** (`CREATE TABLE ...`) or DataFrame action (`df.write.saveAsTable()`). |
 | **Persistence** | **Temporary**. Exists only in the `SparkSession`. | **Permanent**. Metadata and data persist across sessions. |
 | **Access Method** | Variables and programmatic API calls. | SQL queries (`SELECT`, `INSERT`, `UPDATE`). |
 | **Scope** | **Local** to the specific `SparkSession`. | **Global** across the cluster/environment (via Metastore). |
