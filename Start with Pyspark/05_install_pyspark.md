@@ -26,8 +26,8 @@ Apache Spark is a unified analytics engine designed for large-scale data process
 
 Spark SQL is a Spark module for working with structured data. It provides two primary ways to interact with data:
 
-1 **DataFrame and Dataset APIs:** These are high-level, language-integrated APIs that allow you to programmatically build data transformations. They are the most common way to use Spark for data processing.
-2 **SQL Interface:** Spark SQL allows you to write standard SQL queries against your data. It supports a wide range of SQL features, including joins, aggregations, and subqueries.
+1. **DataFrame and Dataset APIs:** These are high-level, language-integrated APIs that allow you to programmatically build data transformations. They are the most common way to use Spark for data processing.
+2. **SQL Interface:** Spark SQL allows you to write standard SQL queries against your data. It supports a wide range of SQL features, including joins, aggregations, and subqueries.
 
 ### Key Concepts:
 
