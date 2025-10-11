@@ -15,6 +15,8 @@
 1. Spark Database and SQL
 2. Spark DataFrame and API
 
+> [!Note] A DataFrame and a Table are two distinct ways to interact with structured data in a data processing system like Apache Spark
+
 ### Apache Spark's Data and SQL Offerings
 
 Apache Spark is a unified analytics engine designed for large-scale data processing. It provides powerful APIs for interacting with structured and unstructured data, with a strong focus on performance and ease of use.
@@ -32,7 +34,7 @@ Spark SQL is a Spark module for working with structured data. It provides two pr
 * **Catalyst Optimizer:** This is the core of Spark SQL's performance. It is a query optimizer that automatically generates a highly efficient execution plan for your code and SQL queries. This is why Spark's DataFrame API and SQL interface are so fast.
 * **Schema Inference:** Spark can automatically infer the schema of a dataset (e.g., column names and data types) from a variety of data sources like Parquet, JSON, and CSV.
 
-## 2. DataFrames
+### 2. DataFrames
 
 A **DataFrame** is a distributed collection of data organized into named columns. Conceptually, it is similar to a table in a relational database or a DataFrame in R/Python, but with optimizations for working with massive datasets across a cluster.
 
