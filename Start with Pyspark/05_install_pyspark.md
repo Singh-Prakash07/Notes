@@ -132,3 +132,9 @@ A **Spark Table** (also known as a **Managed Table** or **External Table**) is a
 | **Scope** | **Local** to the specific `SparkSession`. | **Global** across the cluster/environment (via Metastore). |
 | **Metastore Entry** | No entry (unless registered as a *Temporary View*). | **Required** entry (Metadata stored here). |
 | **Analogy** | A temporary **view** or computed result in a database. | A fundamental, persistent **table** in a database. |
+
+### You can easily convert between the two:
+
+1. **DataFrame → Table:** You use a DataFrame action (df.write.saveAsTable("my_table")) to persist the data and register the metadata in the Catalog.
+
+2. **Table → DataFrame:** You use a Spark reader (spark.table("my_table")) to load the persistent table's data and metadata into a temporary DataFrame variable for processing.
