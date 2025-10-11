@@ -21,7 +21,7 @@
 
 ### Database
 + A Table is a persistent, metadata-centric entity registered in the Spark Catalog (Metastore).
-  
++   
 ### Key Concepts:
 
 * **SparkSession:** This is the entry point to all Spark SQL functionality. It is used to create DataFrames, execute SQL queries, and manage the Spark application.
@@ -51,7 +51,7 @@ A **DataFrame** is a distributed collection of data organized into named columns
     * `collect()`: Returns all the rows as a list of `Row` objects to the driver program. (Use with caution on large datasets).
     * `write()`: Writes the DataFrame to a file or database.
 
-## 3. The APIs: DataFrame vs. RDD
+### 3. The APIs: DataFrame vs. RDD
 
 Spark offers different APIs, but for most use cases, the **DataFrame API** is the recommended choice.
 
@@ -69,13 +69,12 @@ Spark offers different APIs, but for most use cases, the **DataFrame API** is th
 
 **Conclusion:** For most modern Spark applications, especially with structured data, the **DataFrame API** and **Spark SQL** are the go-to tools. They offer the best balance of performance, ease of use, and readability. The RDD API is reserved for highly specialized use cases that require manual control over the data distribution and processing.
 
-# Apache Spark Data Structures: DataFrame vs. Spark Table
-
-This note provides a comprehensive comparison between **Spark DataFrames** and **Spark Tables**, which are two fundamental ways to work with structured data in Apache Spark and Spark SQL. While they represent the same data, their functionality and primary use cases differ.
+### Apache Spark Data Structures: DataFrame vs. Spark Table
++ While they represent the same data, their functionality and primary use cases differ.
 
 ---
 
-## 1. Spark DataFrame
+### 1. Spark DataFrame
 
 A **DataFrame** is the primary programming abstraction in Spark SQL. It is an **in-memory, code-centric** representation of structured data.
 
