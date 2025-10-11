@@ -1,3 +1,25 @@
+### pyspark.sql.SparkSession
++ The entry point to programming Spark with the Dataset and DataFrame API.
++ A SparkSession can be used to create DataFrame, register DataFrame as tables, execute SQL over tables, cache tables, and read parquet files. To create a SparkSession, use the following builder pattern:
+```
+#Creates a Builder for constructing a SparkSession.
+
+# 1. Define the session builder
+spark = SparkSession.builder \
+    .appName("MyPySparkApplication") \
+    .master("local[*]") \
+    .config("spark.some.config.option", "value") \
+    .getOrCreate()
+
+# 2. Use the session (e.g., read a file)
+print("Spark Session created successfully.")
+df = spark.read.csv("data.csv", header=True, inferSchema=True)
+df.show()
+
+# 3. Stop the session (good practice when finished)
+# spark.stop()
+```
+
 ### Reading File in Pyspark
 + Let's talk about different way to read csv file.
 + Assuming 'spark' is an active SparkSession
