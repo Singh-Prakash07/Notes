@@ -7,11 +7,10 @@ AWS offers a diverse and highly scalable portfolio of storage services categoriz
 ### 1. Object Storage
 
 #### **Amazon Simple Storage Service (S3)**
-
 **What it is:** A highly scalable, durable, and available **object storage** service for the internet. It stores data as objects within **buckets** and accesses them via a REST API (HTTP/HTTPS).
 
 **Distinguishing Points:**
-* **Access:** Accessed programmatically via an **API** (not a mounted drive). Data is stored in a **flat hierarchy** (objects have keys, not folders).
+* **Access:** Accessed programmatically via an **API** (not a mounted drive). Data is stored in a **flat hierarchy** (objects have keys, not folders) maximum size of a s3 bucket could be 5 TB.
 * **Scalability & Durability:** Offers virtually **unlimited storage**. Designed for **99.999999999% (11 nines) durability** by replicating data across multiple Availability Zones (AZs) in a region.
 * **Use Cases:** Data lakes, static website hosting, backups, disaster recovery, cloud-native application storage, and content distribution.
 * **Storage Classes:** Includes cost-optimized tiers like **S3 Standard**, **S3 Standard-IA** (Infrequent Access), **S3 One Zone-IA**, and **S3 Glacier**/**Glacier Deep Archive** for long-term archiving.
