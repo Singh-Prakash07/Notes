@@ -1,3 +1,27 @@
++ Binary Exponentiation (also known as Exponentiation by Squaring) is an efficient algorithm used to calculate $a^n$ in $O(\log n)$ time, rather than the traditional $O(n)$ time.
+1. standard way to calculate $3^8$ is $3 \times 3 \times 3 \times 3 \times 3 \times 3 \times 3 \times 3$ (7 multiplications).
+2. Binary exponentiation observes that: $3^8$ = $(3^4)^2$ = $((3^2)^2)^2$ By squaring the base at each step, we reach the answer in only 3 multiplications.
+3. The algorithm splits the problem based on whether the exponent $n$ is even or odd:
+
+   + If $n$ is even: $a^n$ = $(a^{n/2})^2$
+   + If $n$ is odd: $a^n$ = $a \times (a^{(n-1)/2})^2$
+   + Base case: If $n$ = $0$, the result is $1$.
+     
+4. Implementation (Python)The iterative version is usually preferred in coding because it avoids the overhead of recursion and uses constant space $O(1)$.Pythondef binary_expo(a, n):
+
+5. Modular ExponentiationIn coding contests, you are often asked to find $(a^n) \pmod m$ because $a^n$ can become too large for any 64-bit integer to hold.The logic remains the same, but you apply the modulo at every multiplication step to keep the numbers small:
+```
+def power(a, n, m):
+    res = 1
+    a %= m
+    while n > 0:
+        if n % 2 == 1:
+            res = (res * a) % m
+        a = (a * a) % m
+        n //= 2
+    return res
+```
+   ### Matrix Exponentiation
 + Matrix Exponentiation is a technique used to calculate a matrix raised to a power efficiently, that is in logN time. It is mostly used for solving problems related to linear recurrences.
 
 + Similar to Binary Exponentiation which is used to calculate a number raised to a power, Matrix Exponentiation is used to calculate a matrix raised to a power efficiently.
