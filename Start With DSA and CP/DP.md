@@ -1,27 +1,37 @@
-| **Pattern** | **Variation** | **Problem Name** | **Platform Link** |
-| :--- | :--- | :--- | :--- |
-| **0/1 Knapsack** | Standard | 0-1 Knapsack Problem | [GFG](https://www.geeksforgeeks.org/problems/0-1-knapsack-problem0945/1) |
-| **0/1 Knapsack** | Standard | Knapsack with Duplicate Items | [GFG](https://www.geeksforgeeks.org/problems/knapsack-with-duplicate-items4201/1) |
-| **0/1 Knapsack** | Subset Sum | Subset Sum Problem | [GFG](https://www.geeksforgeeks.org/problems/subset-sum-problem-1611555638/1) |
-| **0/1 Knapsack** | Subset Sum | Partition Equal Subset Sum | [LeetCode 416](https://leetcode.com/problems/partition-equal-subset-sum/) |
-| **0/1 Knapsack** | Equal Partition | Partition Equal Subset Sum | [LeetCode 416](https://leetcode.com/problems/partition-equal-subset-sum/) |
-| **0/1 Knapsack** | Equal Partition | Partition to K Equal Sum Subsets | [LeetCode 698](https://leetcode.com/problems/partition-to-k-equal-sum-subsets/) |
-| **0/1 Knapsack** | Count Subsets | Perfect Sum Problem | [GFG](https://www.geeksforgeeks.org/problems/perfect-sum-problem5633/1) |
-| **0/1 Knapsack** | Count Subsets | Combination Sum IV | [LeetCode 377](https://leetcode.com/problems/combination-sum-iv/) |
-| **0/1 Knapsack** | Min Sum Diff | Minimum Sum Partition | [GFG](https://www.geeksforgeeks.org/problems/minimum-sum-partition3317/1) |
-| **0/1 Knapsack** | Min Sum Diff | Last Stone Weight II | [LeetCode 1049](https://leetcode.com/problems/last-stone-weight-ii/) |
-| **0/1 Knapsack** | Target Sum | Target Sum | [LeetCode 494](https://leetcode.com/problems/target-sum/) |
-| **0/1 Knapsack** | Target Sum | Expression Add Operators | [LeetCode 282](https://leetcode.com/problems/expression-add-operators/) |
-| **Unbounded** | Standard | Unbounded Knapsack | [GFG](https://www.geeksforgeeks.org/problems/knapsack-with-duplicate-items4201/1) |
-| **Unbounded** | Standard | Form Largest Integer with Target | [LeetCode 1449](https://leetcode.com/problems/form-largest-integer-with-digits-that-add-up-to-target/) |
-| **Unbounded** | Rod Cutting | Rod Cutting | [GFG](https://www.geeksforgeeks.org/problems/rod-cutting0840/1) |
-| **Unbounded** | Rod Cutting | Integer Break | [LeetCode 343](https://leetcode.com/problems/integer-break/) |
-| **Unbounded** | Coin Change I | Coin Change II (Max Ways) | [LeetCode 518](https://leetcode.com/problems/coin-change-2/) |
-| **Unbounded** | Coin Change I | Ways to Make a Fair Array | [LeetCode 1664](https://leetcode.com/problems/ways-to-make-a-fair-array/) |
-| **Unbounded** | Coin Change II | Coin Change (Min Coins) | [LeetCode 322](https://leetcode.com/problems/coin-change/) |
-| **Unbounded** | Coin Change II | Min Cost For Tickets | [LeetCode 983](https://leetcode.com/problems/minimum-cost-for-tickets/) |
-| **Unbounded** | Ribbon Cut | Maximize The Cut Segments | [GFG](https://www.geeksforgeeks.org/problems/cutted-segments1642/1) |
-| **Unbounded** | Ribbon Cut | Perfect Squares | [LeetCode 279](https://leetcode.com/problems/perfect-squares/) |
+### Pattern 1: 0/1 Knapsack (The Father of DP)
++ **Core Concept**: You have items with Weight & Value. Max capacity W. You can either Pick or Don't Pick.
+
+| **Variation** | **Problem Name** | **Platform Link** |
+| :--- | :--- | :--- |
+| Standard | 0-1 Knapsack Problem | [GFG](https://www.geeksforgeeks.org/problems/0-1-knapsack-problem0945/1) |
+| Standard | Knapsack with Duplicate Items | [GFG](https://www.geeksforgeeks.org/problems/knapsack-with-duplicate-items4201/1) |
+| Subset Sum | Subset Sum Problem | [GFG](https://www.geeksforgeeks.org/problems/subset-sum-problem-1611555638/1) |
+| Subset Sum | Partition Equal Subset Sum | [LeetCode 416](https://leetcode.com/problems/partition-equal-subset-sum/) |
+| Equal Partition | Partition Equal Subset Sum | [LeetCode 416](https://leetcode.com/problems/partition-equal-subset-sum/) |
+| Equal Partition | Partition to K Equal Sum Subsets | [LeetCode 698](https://leetcode.com/problems/partition-to-k-equal-sum-subsets/) |
+| Count Subsets | Perfect Sum Problem | [GFG](https://www.geeksforgeeks.org/problems/perfect-sum-problem5633/1) |
+| Count Subsets | Combination Sum IV | [LeetCode 377](https://leetcode.com/problems/combination-sum-iv/) |
+| Min Sum Diff | Minimum Sum Partition | [GFG](https://www.geeksforgeeks.org/problems/minimum-sum-partition3317/1) |
+| Min Sum Diff | Last Stone Weight II | [LeetCode 1049](https://leetcode.com/problems/last-stone-weight-ii/) |
+| Target Sum | Target Sum | [LeetCode 494](https://leetcode.com/problems/target-sum/) |
+| Target Sum | Expression Add Operators | [LeetCode 282](https://leetcode.com/problems/expression-add-operators/) |
+
+### Pattern 2: Unbounded Knapsack
++ **Core Concept**: Same as 0/1, but you can pick the same item multiple times.
+
+| **Variation** | **Problem Name** | **Platform Link** |
+| :--- | :--- | :--- |
+| Standard | Unbounded Knapsack | [GFG](https://www.geeksforgeeks.org/problems/knapsack-with-duplicate-items4201/1) |
+| Standard | Form Largest Integer with Target | [LeetCode 1449](https://leetcode.com/problems/form-largest-integer-with-digits-that-add-up-to-target/) |
+| Rod Cutting | Rod Cutting | [GFG](https://www.geeksforgeeks.org/problems/rod-cutting0840/1) |
+| Rod Cutting | Integer Break | [LeetCode 343](https://leetcode.com/problems/integer-break/) |
+| Coin Change I | Coin Change II (Max Ways) | [LeetCode 518](https://leetcode.com/problems/coin-change-2/) |
+| Coin Change I | Ways to Make a Fair Array | [LeetCode 1664](https://leetcode.com/problems/ways-to-make-a-fair-array/) |
+| Coin Change II | Coin Change (Min Coins) | [LeetCode 322](https://leetcode.com/problems/coin-change/) |
+| Coin Change II | Min Cost For Tickets | [LeetCode 983](https://leetcode.com/problems/minimum-cost-for-tickets/) |
+| Ribbon Cut | Maximize The Cut Segments | [GFG](https://www.geeksforgeeks.org/problems/cutted-segments1642/1) |
+| Ribbon Cut | Perfect Squares | [LeetCode 279](https://leetcode.com/problems/perfect-squares/) |
+
 | **LCS** | Standard | Longest Common Subsequence | [LeetCode 1143](https://leetcode.com/problems/longest-common-subsequence/) |
 | **LCS** | Standard | Uncrossed Lines | [LeetCode 1035](https://leetcode.com/problems/uncrossed-lines/) |
 | **LCS** | Substring | Longest Common Substring | [GFG](https://www.geeksforgeeks.org/problems/longest-common-substring1452/1) |
