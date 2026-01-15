@@ -1,3 +1,13 @@
++ Read the problem.
++ Grab Pen & Paper.
++ Draw a small Recursion Tree (Inputs: n=3 or n=4).
++ Write the Recurrence Relation on paper.
++ Go to LeetCode.
++ Code Step 1 (Recursion). Run it. (Expect TLE).
++ Code Step 2 (Memoization). Submit it. (Expect Success).
++ Reflect: "Can I convert this recursion(i) to a dp[i] loop?"
++ Code Step 3 (Tabulation). Submit it.
+
 ### Pattern 1: 0/1 Knapsack (The Father of DP)
 + **Core Concept**: You have items with Weight & Value. Max capacity W. You can either Pick or Don't Pick.
 
