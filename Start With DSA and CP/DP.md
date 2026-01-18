@@ -8,7 +8,23 @@
 + Reflect: "Can I convert this recursion(i) to a dp[i] loop?"
 + Code Step 3 (Tabulation). Submit it.
 
-### Pattern 1: 0/1 Knapsack (The Father of DP)
+### Pattern 1: Kadane's Algorithm (1D & 2D)
++ **Core Concept**: Maximum Subarray Sum.
+
+| **Variation** | **Problem Name** | **Platform Link** |
+| :--- | :--- | :--- |
+| Stairs | Climbing Stairs | [LeetCode 70](https://leetcode.com/problems/climbing-stairs/) |
+| Stairs | Min Cost Climbing Stairs | [LeetCode 746](https://leetcode.com/problems/min-cost-climbing-stairs/) |
+| Frog Jump | Geek Jump (Frog Jump) | [GFG](https://www.geeksforgeeks.org/problems/geek-jump/1) |
+| Frog Jump | Frog Jump II | [LeetCode 2498](https://leetcode.com/problems/frog-jump-ii/) |
+| Robber | House Robber | [LeetCode 198](https://leetcode.com/problems/house-robber/) |
+| Robber | House Robber II | [LeetCode 213](https://leetcode.com/problems/house-robber-ii/) |
+| Tiling | Domino and Tromino Tiling | [LeetCode 790](https://leetcode.com/problems/domino-and-tromino-tiling/) |
+| Tiling | Ways to Tile a Floor | [GFG](https://www.geeksforgeeks.org/problems/ways-to-tile-a-floor5836/1) |
+| Decoding | Decode Ways | [LeetCode 91](https://leetcode.com/problems/decode-ways/) |
+| Decoding | Decode Ways II | [LeetCode 639](https://leetcode.com/problems/decode-ways-ii/) |
+
+### Pattern 2: 0/1 Knapsack (The Father of DP)
 + **Core Concept**: You have items with Weight & Value. Max capacity W. You can either Pick or Don't Pick.
 
 | **Variation** | **Problem Name** | **Platform Link** |
@@ -26,7 +42,7 @@
 | Target Sum | Target Sum | [LeetCode 494](https://leetcode.com/problems/target-sum/) |
 | Target Sum | Expression Add Operators | [LeetCode 282](https://leetcode.com/problems/expression-add-operators/) |
 
-### Pattern 2: Unbounded Knapsack
+### Pattern 3: Unbounded Knapsack
 + **Core Concept**: Same as 0/1, but you can pick the same item multiple times.
 
 | **Variation** | **Problem Name** | **Platform Link** |
@@ -42,7 +58,7 @@
 | Ribbon Cut | Maximize The Cut Segments | [GFG](https://www.geeksforgeeks.org/problems/cutted-segments1642/1) |
 | Ribbon Cut | Perfect Squares | [LeetCode 279](https://leetcode.com/problems/perfect-squares/) |
 
-### Pattern 3: Longest Common Subsequence (LCS)
+### Pattern 4: Longest Common Subsequence (LCS)
 + **Core Concept**: Matching two strings/sequences.
 + State: dp[i][j] = matching length of s1[0..i] and s2[0..j].
 
@@ -76,7 +92,40 @@
 | Interleaving | Scramble String | [LeetCode 87](https://leetcode.com/problems/scramble-string/) |
 
 
-### Pattern 4: Matrix Chain Multiplication (MCM)
+### Pattern 5: DP on Grids
++ **Core Concept**: dp[i][j] depends on dp[i-1][j] (Top) and dp[i][j-1] (Left).
+
+| **Variation** | **Problem Name** | **Platform Link** |
+| :--- | :--- | :--- |
+| Standard | Longest Increasing Subsequence | [LeetCode 300](https://leetcode.com/problems/longest-increasing-subsequence/) |
+| Standard | Number of Longest Increasing Subseq | [LeetCode 673](https://leetcode.com/problems/number-of-longest-increasing-subsequence/) |
+| Envelopes | Russian Doll Envelopes | [LeetCode 354](https://leetcode.com/problems/russian-doll-envelopes/) |
+| Envelopes | Max Height by Stacking Cuboids | [LeetCode 1691](https://leetcode.com/problems/maximum-height-by-stacking-cuboids/) |
+| Max Sum | Maximum Sum Increasing Subsequence | [GFG](https://www.geeksforgeeks.org/problems/maximum-sum-increasing-subsequence4749/1) |
+| Max Sum | Best Team With No Conflicts | [LeetCode 1626](https://leetcode.com/problems/best-team-with-no-conflicts/) |
+| String Chain | Longest String Chain | [LeetCode 1048](https://leetcode.com/problems/longest-string-chain/) |
+| String Chain | Largest Divisible Subset | [LeetCode 368](https://leetcode.com/problems/largest-divisible-subset/) |
+| Min Removals | Shortest Subarray to be Removed | [LeetCode 1574](https://leetcode.com/problems/shortest-subarray-to-be-removed-to-make-array-sorted/) |
+| Min Removals | Min Deletions to Make Sorted Array | [GFG](https://www.geeksforgeeks.org/problems/minimum-deletions-to-make-sorted-array/1) |
+
+### Pattern 6: Longest Increasing Subsequence (LIS)
++ **Core Concept**: dp[i] = max length ending at index i.
+
+| **Variation** | **Problem Name** | **Platform Link** |
+| :--- | :--- | :--- |
+| Unique Paths | Unique Paths | [LeetCode 62](https://leetcode.com/problems/unique-paths/) |
+| Unique Paths | Unique Paths II | [LeetCode 63](https://leetcode.com/problems/unique-paths-ii/) |
+| Min Path Sum | Minimum Path Sum | [LeetCode 64](https://leetcode.com/problems/minimum-path-sum/) |
+| Min Path Sum | Minimum Falling Path Sum | [LeetCode 931](https://leetcode.com/problems/minimum-falling-path-sum/) |
+| Cherry Pickup | Cherry Pickup | [LeetCode 741](https://leetcode.com/problems/cherry-pickup/) |
+| Cherry Pickup | Cherry Pickup II | [LeetCode 1463](https://leetcode.com/problems/cherry-pickup-ii/) |
+| Squares | Maximal Square | [LeetCode 221](https://leetcode.com/problems/maximal-square/) |
+| Squares | Maximal Rectangle | [LeetCode 85](https://leetcode.com/problems/maximal-rectangle/) |
+| Dungeon | Dungeon Game | [LeetCode 174](https://leetcode.com/problems/dungeon-game/) |
+| Dungeon | Minimum Path Cost in a Grid | [LeetCode 2304](https://leetcode.com/problems/minimum-path-cost-in-a-grid/) |
+
+
+### Pattern 7: Matrix Chain Multiplication (MCM)
 + **Core Concept**: Find the optimal place to "cut" (k) in a range (i to j).
 + Loop: for(k = i; k < j; k++)
 
@@ -93,7 +142,21 @@
 | Egg Drop | Super Egg Drop | [LeetCode 887](https://leetcode.com/problems/super-egg-drop/) |
 | Egg Drop | Egg Dropping Puzzle | [GFG](https://www.geeksforgeeks.org/problems/egg-dropping-puzzle-1587115620/1) |
 
-### Pattern 5: DP on Trees
+### Pattern 8: DP on Stocks (State Machine)
++ **Core Concept**: dp[day][holding_status][transaction_count]
+
+| **Variation** | **Problem Name** | **Platform Link** |
+| :--- | :--- | :--- |
+| Max Subarray | Maximum Subarray | [LeetCode 53](https://leetcode.com/problems/maximum-subarray/) |
+| Max Subarray | Max Absolute Sum of Any Subarray | [LeetCode 1749](https://leetcode.com/problems/maximum-absolute-sum-of-any-subarray/) |
+| Max Product | Maximum Product Subarray | [LeetCode 152](https://leetcode.com/problems/maximum-product-subarray/) |
+| Max Product | Subarray Product Less Than K | [LeetCode 713](https://leetcode.com/problems/subarray-product-less-than-k/) |
+| Circular | Maximum Sum Circular Subarray | [LeetCode 918](https://leetcode.com/problems/maximum-sum-circular-subarray/) |
+| Circular | Max Length of Subarray Pos Product | [LeetCode 1567](https://leetcode.com/problems/maximum-length-of-subarray-with-positive-product/) |
+| 2D Matrix | Maximum Sum Rectangle | [GFG](https://www.geeksforgeeks.org/problems/maximum-sum-rectangle-29/1) |
+| 2D Matrix | Max Sum of Rectangle No Larger Than K | [LeetCode 363](https://leetcode.com/problems/max-sum-of-rectangle-no-larger-than-k/) |
+
+### Pattern 9: DP on Trees
 + **Core Concept**: Use recursion to return values from Left and Right children to answer the parent.
 
 | **Variation** | **Problem Name** | **Platform Link** |
@@ -108,68 +171,6 @@
 | Robber | Longest Univalue Path | [LeetCode 687](https://leetcode.com/problems/longest-univalue-path/) |
 | LCA | Lowest Common Ancestor of Binary Tree | [LeetCode 236](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/) |
 | LCA | Kth Ancestor of a Tree Node | [LeetCode 1483](https://leetcode.com/problems/kth-ancestor-of-a-tree-node/) |
-
-### Pattern 6: DP on Grids
-+ **Core Concept**: dp[i][j] depends on dp[i-1][j] (Top) and dp[i][j-1] (Left).
-
-| **Variation** | **Problem Name** | **Platform Link** |
-| :--- | :--- | :--- |
-| Standard | Longest Increasing Subsequence | [LeetCode 300](https://leetcode.com/problems/longest-increasing-subsequence/) |
-| Standard | Number of Longest Increasing Subseq | [LeetCode 673](https://leetcode.com/problems/number-of-longest-increasing-subsequence/) |
-| Envelopes | Russian Doll Envelopes | [LeetCode 354](https://leetcode.com/problems/russian-doll-envelopes/) |
-| Envelopes | Max Height by Stacking Cuboids | [LeetCode 1691](https://leetcode.com/problems/maximum-height-by-stacking-cuboids/) |
-| Max Sum | Maximum Sum Increasing Subsequence | [GFG](https://www.geeksforgeeks.org/problems/maximum-sum-increasing-subsequence4749/1) |
-| Max Sum | Best Team With No Conflicts | [LeetCode 1626](https://leetcode.com/problems/best-team-with-no-conflicts/) |
-| String Chain | Longest String Chain | [LeetCode 1048](https://leetcode.com/problems/longest-string-chain/) |
-| String Chain | Largest Divisible Subset | [LeetCode 368](https://leetcode.com/problems/largest-divisible-subset/) |
-| Min Removals | Shortest Subarray to be Removed | [LeetCode 1574](https://leetcode.com/problems/shortest-subarray-to-be-removed-to-make-array-sorted/) |
-| Min Removals | Min Deletions to Make Sorted Array | [GFG](https://www.geeksforgeeks.org/problems/minimum-deletions-to-make-sorted-array/1) |
-
-### Pattern 7: Longest Increasing Subsequence (LIS)
-+ **Core Concept**: dp[i] = max length ending at index i.
-
-| **Variation** | **Problem Name** | **Platform Link** |
-| :--- | :--- | :--- |
-| Unique Paths | Unique Paths | [LeetCode 62](https://leetcode.com/problems/unique-paths/) |
-| Unique Paths | Unique Paths II | [LeetCode 63](https://leetcode.com/problems/unique-paths-ii/) |
-| Min Path Sum | Minimum Path Sum | [LeetCode 64](https://leetcode.com/problems/minimum-path-sum/) |
-| Min Path Sum | Minimum Falling Path Sum | [LeetCode 931](https://leetcode.com/problems/minimum-falling-path-sum/) |
-| Cherry Pickup | Cherry Pickup | [LeetCode 741](https://leetcode.com/problems/cherry-pickup/) |
-| Cherry Pickup | Cherry Pickup II | [LeetCode 1463](https://leetcode.com/problems/cherry-pickup-ii/) |
-| Squares | Maximal Square | [LeetCode 221](https://leetcode.com/problems/maximal-square/) |
-| Squares | Maximal Rectangle | [LeetCode 85](https://leetcode.com/problems/maximal-rectangle/) |
-| Dungeon | Dungeon Game | [LeetCode 174](https://leetcode.com/problems/dungeon-game/) |
-| Dungeon | Minimum Path Cost in a Grid | [LeetCode 2304](https://leetcode.com/problems/minimum-path-cost-in-a-grid/) |
-
-### Pattern 8: Kadane's Algorithm (1D & 2D)
-+ **Core Concept**: Maximum Subarray Sum.
-
-| **Variation** | **Problem Name** | **Platform Link** |
-| :--- | :--- | :--- |
-| Stairs | Climbing Stairs | [LeetCode 70](https://leetcode.com/problems/climbing-stairs/) |
-| Stairs | Min Cost Climbing Stairs | [LeetCode 746](https://leetcode.com/problems/min-cost-climbing-stairs/) |
-| Frog Jump | Geek Jump (Frog Jump) | [GFG](https://www.geeksforgeeks.org/problems/geek-jump/1) |
-| Frog Jump | Frog Jump II | [LeetCode 2498](https://leetcode.com/problems/frog-jump-ii/) |
-| Robber | House Robber | [LeetCode 198](https://leetcode.com/problems/house-robber/) |
-| Robber | House Robber II | [LeetCode 213](https://leetcode.com/problems/house-robber-ii/) |
-| Tiling | Domino and Tromino Tiling | [LeetCode 790](https://leetcode.com/problems/domino-and-tromino-tiling/) |
-| Tiling | Ways to Tile a Floor | [GFG](https://www.geeksforgeeks.org/problems/ways-to-tile-a-floor5836/1) |
-| Decoding | Decode Ways | [LeetCode 91](https://leetcode.com/problems/decode-ways/) |
-| Decoding | Decode Ways II | [LeetCode 639](https://leetcode.com/problems/decode-ways-ii/) |
-
-### Pattern 9: DP on Stocks (State Machine)
-+ **Core Concept**: dp[day][holding_status][transaction_count]
-
-| **Variation** | **Problem Name** | **Platform Link** |
-| :--- | :--- | :--- |
-| Max Subarray | Maximum Subarray | [LeetCode 53](https://leetcode.com/problems/maximum-subarray/) |
-| Max Subarray | Max Absolute Sum of Any Subarray | [LeetCode 1749](https://leetcode.com/problems/maximum-absolute-sum-of-any-subarray/) |
-| Max Product | Maximum Product Subarray | [LeetCode 152](https://leetcode.com/problems/maximum-product-subarray/) |
-| Max Product | Subarray Product Less Than K | [LeetCode 713](https://leetcode.com/problems/subarray-product-less-than-k/) |
-| Circular | Maximum Sum Circular Subarray | [LeetCode 918](https://leetcode.com/problems/maximum-sum-circular-subarray/) |
-| Circular | Max Length of Subarray Pos Product | [LeetCode 1567](https://leetcode.com/problems/maximum-length-of-subarray-with-positive-product/) |
-| 2D Matrix | Maximum Sum Rectangle | [GFG](https://www.geeksforgeeks.org/problems/maximum-sum-rectangle-29/1) |
-| 2D Matrix | Max Sum of Rectangle No Larger Than K | [LeetCode 363](https://leetcode.com/problems/max-sum-of-rectangle-no-larger-than-k/) |
 
 ### Pattern 10: Partition/Gap Strategy
 + **Core Concept**: Similar to MCM but often involves game theory or palindromes.
@@ -186,3 +187,4 @@
 | Cooldown | Minimum Number of Days to Bloom | [LeetCode 1482](https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/) |
 | k Trans | Best Time to Buy and Sell Stock IV | [LeetCode 188](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/) |
 | k Trans | Maximum Profit From Trading Stocks | [LeetCode 2291](https://leetcode.com/problems/maximum-profit-from-trading-stocks/) |
++ Digit DP & Bitmask DP
