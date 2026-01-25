@@ -9,23 +9,55 @@
 + Reflect: "Can I convert this recursion(i) to a dp[i] loop?"
 + Code Step 3 (Tabulation). Submit it.
 
-### Pattern 1: Kadane's Algorithm (1D & 2D)
-+ **Core Concept**: Maximum Subarray Sum.
-
-| **Variation** | **Problem Name** | **Platform Link** |
+### 🟢 Pattern 1: Linear DP (Stairs, Robbing, Tiling & Advanced)
+| Category | Problem Name | Platform Link |
 | :--- | :--- | :--- |
-| Stairs | Climbing Stairs | [LeetCode 70](https://leetcode.com/problems/climbing-stairs/) |
-| Stairs | Min Cost Climbing Stairs | [LeetCode 746](https://leetcode.com/problems/min-cost-climbing-stairs/) |
-| Frog Jump | Geek Jump (Frog Jump) | [GFG](https://www.geeksforgeeks.org/problems/geek-jump/1) |
-| Frog Jump | Frog Jump II | [LeetCode 2498](https://leetcode.com/problems/frog-jump-ii/) |
-| Robber | House Robber | [LeetCode 198](https://leetcode.com/problems/house-robber/) |
-| Robber | House Robber II | [LeetCode 213](https://leetcode.com/problems/house-robber-ii/) |
-| Tiling | Domino and Tromino Tiling | [LeetCode 790](https://leetcode.com/problems/domino-and-tromino-tiling/) |
-| Tiling | Ways to Tile a Floor | [GFG](https://www.geeksforgeeks.org/problems/ways-to-tile-a-floor5836/1) |
-| Decoding | Decode Ways | [LeetCode 91](https://leetcode.com/problems/decode-ways/) |
-| Decoding | Decode Ways II | [LeetCode 639](https://leetcode.com/problems/decode-ways-ii/) |
+| **Stairs** | Climbing Stairs | [LeetCode 70](https://leetcode.com/problems/climbing-stairs/) |
+| **Stairs** | Min Cost Climbing Stairs | [LeetCode 746](https://leetcode.com/problems/min-cost-climbing-stairs/) |
+| **Frog Jump** | Geek Jump (Frog Jump) | [GFG Link](https://www.geeksforgeeks.org/problems/geek-jump/1) |
+| **Frog Jump** | Frog Jump II | [LeetCode 2498](https://leetcode.com/problems/frog-jump-ii/) |
+| **Robber** | House Robber | [LeetCode 198](https://leetcode.com/problems/house-robber/) |
+| **Robber** | House Robber II | [LeetCode 213](https://leetcode.com/problems/house-robber-ii/) |
+| **Tiling** | Domino and Tromino Tiling | [LeetCode 790](https://leetcode.com/problems/domino-and-tromino-tiling/) |
+| **Tiling** | Ways to Tile a Floor | [GFG Link](https://www.geeksforgeeks.org/problems/ways-to-tile-a-floor5836/1) |
+| **Decoding** | Decode Ways | [LeetCode 91](https://leetcode.com/problems/decode-ways/) |
+| **Decoding** | Decode Ways II | [LeetCode 639](https://leetcode.com/problems/decode-ways-ii/) |
+| **State** | Buy/Sell Stock with Transaction Fee | [LeetCode 714](https://leetcode.com/problems/714) |
+| **Non-Adjacent** | Delete and Earn | [LeetCode 740](https://leetcode.com/problems/delete-and-earn/) |
+| **Partition** | Integer Break | [LeetCode 343](https://leetcode.com/problems/integer-break/) |
+| **Sequence** | Arithmetic Slices | [LeetCode 413](https://leetcode.com/problems/arithmetic-slices/) |
+| **Jump** | Jump Game II | [LeetCode 45](https://leetcode.com/problems/jump-game-ii/) |
+| **State** | Student Attendance Record II | [LeetCode 552](https://leetcode.com/problems/student-attendance-record-ii/) |
+| **Grid** | Out of Boundary Paths | [LeetCode 576](https://leetcode.com/problems/out-of-boundary-paths/) |
+| **Logic** | Solving Questions with Brainpower | [LeetCode 2140](https://leetcode.com/problems/solving-questions-with-brainpower/) |
+| **Math** | Greatest Sum Divisible by Three | [LeetCode 1262](https://leetcode.com/problems/greatest-sum-divisible-by-three/) |
+| **Split** | Restore The Array | [LeetCode 1416](https://leetcode.com/problems/restore-the-array/) |
+### Pattern2: Kadane’s Algorithm & Subarray DP
+*Logic: Local vs. Global decision: Start a new subarray or extend the previous one.*
 
-### Pattern 2: 0/1 Knapsack (The Father of DP)
+| Problem Name | Variation Type / Logic | Platform Link |
+| :--- | :--- | :--- |
+| **Maximum Subarray** | **The Parent Problem**: Find the largest sum in a contiguous subarray. | [LeetCode 53](https://leetcode.com/problems/maximum-subarray/) |
+| **Maximum Sum Circular Subarray** | Handle wrap-around subarrays using total sum minus minimum subarray. | [LeetCode 918](https://leetcode.com/problems/maximum-sum-circular-subarray/) |
+| **Maximum Product Subarray** | Track both Min and Max because two negatives make a positive. | [LeetCode 152](https://leetcode.com/problems/maximum-product-subarray/) |
+| **Best Time to Buy and Sell Stock** | 1 transaction: Find max difference between buy and sell price. | [LeetCode 121](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) |
+| **K-Concatenation Maximum Sum** | Kadane’s on a repeated array; requires prefix/suffix logic. | [LeetCode 1191](https://leetcode.com/problems/k-concatenation-maximum-sum/) |
+| **Maximum Absolute Sum of Any Subarray** | Find the max of both the largest positive and largest negative subarray. | [LeetCode 1749](https://leetcode.com/problems/maximum-absolute-sum-of-any-subarray/) |
+| **Longest Turbulent Subarray** | Logic based on the "wiggle" (alternating sign flip) of elements. | [LeetCode 978](https://leetcode.com/problems/longest-turbulent-subarray/) |
+| **Flip String to Monotone Increasing** | State transition: Decide to flip 0 to 1 or 1 to 0 at each step. | [LeetCode 926](https://leetcode.com/problems/flip-string-to-monotone-increasing/) |
+| **Maximum Earnings From Taxi** | Interval-based Kadane's: Weighted subarray selection. | [LeetCode 2008](https://leetcode.com/problems/maximum-earnings-from-taxi/) |
+| **House Robber** | Non-adjacent subarray sum: Extend from i-2 or skip. | [LeetCode 198](https://leetcode.com/problems/house-robber/) |
+| **Maximum Subarray Sum with One Deletion** | Maintain two states: "not deleted" and "already deleted one." | [LeetCode 1186](https://leetcode.com/problems/maximum-subarray-sum-with-one-deletion/) |
+| **Smallest Subarray with Sum > X** | The "Minimum" version of Kadane's using sliding window logic. | [GFG Link](https://www.geeksforgeeks.org/problems/smallest-subarray-with-sum-greater-than-x5651/1) |
+| **Maximum Sum of 3 Non-Overlapping Subarrays** | Combining window sums with DP to pick three distinct segments. | [LeetCode 689](https://leetcode.com/problems/maximum-sum-of-3-non-overlapping-subarrays/) |
+| **Maximum Sum Rectangle in a 2D Matrix** | Reduces 2D matrix into 1D columns and applies Kadane’s logic. | [GFG Link](https://www.geeksforgeeks.org/problems/maximum-sum-rectangle0832/1) |
+| **Maximum Score from Performing Multiplications** | Subarray "ends" logic: picking from the front or back of the array. | [LeetCode 1770](https://leetcode.com/problems/maximum-score-from-performing-multiplication-operations/) |
+| **Maximum Score of a Spliced Array** | Find "Max Gain" using Kadane’s on the difference between arrays. | [LeetCode 2321](https://leetcode.com/problems/maximum-score-of-a-spliced-array/) |
+| **Max Sum of Rectangle No Larger Than K** | 2D Kadane's with a specific sum constraint using TreeSet/Binary Search. | [LeetCode 363](https://leetcode.com/problems/max-sum-of-rectangle-no-larger-than-k/) |
+| **Best Time to Buy and Sell Stock with Cooldown** | State-machine DP logic applied to a subarray decision. | [LeetCode 309](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/) |
+| **Maximum Subarray Sum with at most K elements** | Kadane's logic combined with a Deque or Sliding Window constraint. | [GFG Link](https://www.geeksforgeeks.org/problems/maximum-sum-of-subarray-of-size-at-most-k/1) |
+| **Maximum Sum of Subarray of size K** | Fixed window Kadane's: Sliding window basics for subarray sums. | [GFG Link](https://www.geeksforgeeks.org/problems/max-sum-subarray-of-size-k5313/1) |
+### Pattern 3: 0/1 Knapsack (The Father of DP)
 + **Core Concept**: You have items with Weight & Value. Max capacity W. You can either Pick or Don't Pick.
 
 | **Variation** | **Problem Name** | **Platform Link** |
@@ -42,8 +74,14 @@
 | Min Sum Diff | Last Stone Weight II | [LeetCode 1049](https://leetcode.com/problems/last-stone-weight-ii/) |
 | Target Sum | Target Sum | [LeetCode 494](https://leetcode.com/problems/target-sum/) |
 | Target Sum | Expression Add Operators | [LeetCode 282](https://leetcode.com/problems/expression-add-operators/) |
+| **Target Sum** | Assign signs to reach target. | [LeetCode 494](https://leetcode.com/problems/target-sum/) |
+| **Last Stone Weight II** | Minimize difference between two subset sums. | [LeetCode 1049](https://leetcode.com/problems/last-stone-weight-ii/) |
+| **Ones and Zeroes** | Knapsack with two independent capacities. | [LeetCode 474](https://leetcode.com/problems/ones-and-zeroes/) |
+| **Tallest Billboard** | Track difference of two subset sums. | [LeetCode 956](https://leetcode.com/problems/tallest-billboard/) |
+| **Profitable Schemes** | Knapsack with a "minimum profit" gate. | [LeetCode 879](https://leetcode.com/problems/profitable-schemes/) |
+| **Partition Into 2 Arrays** | Minimize sum difference (Meet-in-the-middle). | [LeetCode 2035](https://leetcode.com/problems/partition-array-into-two-arrays-to-minimize-sum-difference/) |
 
-### Pattern 3: Unbounded Knapsack
+### Pattern 4: Unbounded Knapsack
 + **Core Concept**: Same as 0/1, but you can pick the same item multiple times.
 
 | **Variation** | **Problem Name** | **Platform Link** |
@@ -59,7 +97,7 @@
 | Ribbon Cut | Maximize The Cut Segments | [GFG](https://www.geeksforgeeks.org/problems/cutted-segments1642/1) |
 | Ribbon Cut | Perfect Squares | [LeetCode 279](https://leetcode.com/problems/perfect-squares/) |
 
-### Pattern 4: Longest Common Subsequence (LCS)
+### Pattern 5: Longest Common Subsequence (LCS)
 + **Core Concept**: Matching two strings/sequences.
 + State: dp[i][j] = matching length of s1[0..i] and s2[0..j].
 
@@ -93,7 +131,7 @@
 | Interleaving | Scramble String | [LeetCode 87](https://leetcode.com/problems/scramble-string/) |
 
 
-### Pattern 5: DP on Grids
+### Pattern 6: DP on Grids
 + **Core Concept**: dp[i][j] depends on dp[i-1][j] (Top) and dp[i][j-1] (Left).
 
 | **Variation** | **Problem Name** | **Platform Link** |
@@ -109,7 +147,7 @@
 | Min Removals | Shortest Subarray to be Removed | [LeetCode 1574](https://leetcode.com/problems/shortest-subarray-to-be-removed-to-make-array-sorted/) |
 | Min Removals | Min Deletions to Make Sorted Array | [GFG](https://www.geeksforgeeks.org/problems/minimum-deletions-to-make-sorted-array/1) |
 
-### Pattern 6: Longest Increasing Subsequence (LIS)
+### Pattern 7: Longest Increasing Subsequence (LIS)
 + **Core Concept**: dp[i] = max length ending at index i.
 
 | **Variation** | **Problem Name** | **Platform Link** |
@@ -126,7 +164,7 @@
 | Dungeon | Minimum Path Cost in a Grid | [LeetCode 2304](https://leetcode.com/problems/minimum-path-cost-in-a-grid/) |
 
 
-### Pattern 7: Matrix Chain Multiplication (MCM)
+### Pattern 8: Matrix Chain Multiplication (MCM)
 + **Core Concept**: Find the optimal place to "cut" (k) in a range (i to j).
 + Loop: for(k = i; k < j; k++)
 
@@ -143,7 +181,7 @@
 | Egg Drop | Super Egg Drop | [LeetCode 887](https://leetcode.com/problems/super-egg-drop/) |
 | Egg Drop | Egg Dropping Puzzle | [GFG](https://www.geeksforgeeks.org/problems/egg-dropping-puzzle-1587115620/1) |
 
-### Pattern 8: DP on Stocks (State Machine)
+### Pattern 9: DP on Stocks (State Machine)
 + **Core Concept**: dp[day][holding_status][transaction_count]
 
 | **Variation** | **Problem Name** | **Platform Link** |
@@ -157,7 +195,7 @@
 | 2D Matrix | Maximum Sum Rectangle | [GFG](https://www.geeksforgeeks.org/problems/maximum-sum-rectangle-29/1) |
 | 2D Matrix | Max Sum of Rectangle No Larger Than K | [LeetCode 363](https://leetcode.com/problems/max-sum-of-rectangle-no-larger-than-k/) |
 
-### Pattern 9: DP on Trees
+### Pattern 10: DP on Trees
 + **Core Concept**: Use recursion to return values from Left and Right children to answer the parent.
 
 | **Variation** | **Problem Name** | **Platform Link** |
@@ -173,7 +211,7 @@
 | LCA | Lowest Common Ancestor of Binary Tree | [LeetCode 236](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/) |
 | LCA | Kth Ancestor of a Tree Node | [LeetCode 1483](https://leetcode.com/problems/kth-ancestor-of-a-tree-node/) |
 
-### Pattern 10: Partition/Gap Strategy
+### Pattern 11: Partition/Gap Strategy
 + **Core Concept**: Similar to MCM but often involves game theory or palindromes.
 
 | **Variation** | **Problem Name** | **Platform Link** |
