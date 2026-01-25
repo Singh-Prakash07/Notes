@@ -1,3 +1,4 @@
+[CP Handbook](https://cses.fi/book/book.pdf)
 + Read the problem.
 + Grab Pen & Paper.
 + Draw a small Recursion Tree (Inputs: n=3 or n=4).
