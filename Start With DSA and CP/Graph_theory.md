@@ -91,3 +91,66 @@ def floyd_warshall(V, adj_matrix):
                 dist[i][j] = min(dist[i][j], dist[i][k] + dist[k][j])
     
     return dist
+
+## Minimum Spanning Tree (MST) Overview
+
+### 1. Key Properties
+* **V-1 Edges:** An MST always has exactly $V - 1$ edges, where $V$ is the number of vertices.
+* **No Cycles:** By definition, a tree cannot have cycles.
+* **Connectivity:** Every node must be reachable from every other node.
+* **Uniqueness:** If all edge weights are unique, there is only one MST. If weights are identical, there could be multiple.
+
+
+
+---
+
+### 2. The Two Main Algorithms
+
+There are two primary greedy algorithms used to find an MST:
+
+| Feature | Kruskal's Algorithm | Prim's Algorithm |
+| :--- | :--- | :--- |
+| **Approach** | Edge-based (Sorts all edges). | Vertex-based (Grows from a root). |
+| **Data Structure** | Disjoint Set Union (DSU). | Priority Queue (Min-Heap). |
+| **Best for...** | Sparse graphs (fewer edges). | Dense graphs (many edges). |
+| **Complexity** | $O(E \log E)$ or $O(E \log V)$. | $O(E \log V)$ with a binary heap. |
+
+---
+
+### 3. Kruskal's Algorithm (Implementation)
+Kruskal’s works by sorting all edges from cheapest to most expensive and adding them one by one if they don't form a cycle.
+
+
+
+```python
+class DSU:
+    def __init__(self, n):
+        self.parent = list(range(n))
+    
+    def find(self, i):
+        if self.parent[i] == i:
+            return i
+        self.parent[i] = self.find(self.parent[i]) # Path compression
+        return self.parent[i]
+
+    def union(self, i, j):
+        root_i = self.find(i)
+        root_j = self.find(j)
+        if root_i != root_j:
+            self.parent[root_i] = root_j
+            return True
+        return False
+
+def kruskal_mst(V, edges):
+    # edges = [(weight, u, v), ...]
+    edges.sort() 
+    dsu = DSU(V)
+    mst_weight = 0
+    mst_edges = []
+
+    for w, u, v in edges:
+        if dsu.union(u, v):
+            mst_weight += w
+            mst_edges.append((u, v, w))
+            
+    return mst_weight, mst_edges
