@@ -2,7 +2,7 @@
 |---|--------------|------------|------|-------------|
 | 1 | Find if Path Exists in Graph | Easy | [LeetCode 1971](https://leetcode.com/problems/find-if-path-exists-in-graph/) | Basic connectivity check |
 | 2 | Number of Provinces | Easy | [LeetCode 547](https://leetcode.com/problems/number-of-provinces/) | Count connected components |
-| 3 | The Earliest Moment When Everyone Become Friends | Easy | [LeetCode 1101](https://leetcode.com/problems/the-earliest-moment-when-everyone-become-friends/) | Time-based union, count tracking |
+| 3 | The Earliest Moment When Everyone Become Friends | Easy(premium) | [LeetCode 1101](https://leetcode.com/problems/the-earliest-moment-when-everyone-become-friends/) | Time-based union, count tracking |
 | 4 | Smallest String With Swaps | Easy | [LeetCode 1202](https://leetcode.com/problems/smallest-string-with-swaps/) | Group by component, sort |
 | 5 | Redundant Connection | Easy | [LeetCode 684](https://leetcode.com/problems/redundant-connection/) | Cycle detection |
 | 6 | Regions Cut By Slashes | Easy-Medium | [LeetCode 959](https://leetcode.com/problems/regions-cut-by-slashes/) | Grid to DSU (4 triangles per cell) |
