@@ -25,3 +25,8 @@
 | 23 | Making a Large Island | Hard | [LeetCode 827](https://leetcode.com/problems/making-a-large-island/) | Island size tracking, neighbor check |
 | 24 | Number of Good Paths | Hard | [LeetCode 2421](https://leetcode.com/problems/number-of-good-paths/) | Sort by value, incremental DSU |
 | 25 | Checking Existence of Edge Length Limited Paths II | Hard | [LeetCode 2846](https://leetcode.com/problems/checking-existence-of-edge-length-limited-paths-ii/) | Persistent/Online DSU |
+| 26 | Is Graph Bipartite? | Medium | [LeetCode 785](https://leetcode.com/problems/is-graph-bipartite/) | Bipartite check with DSU (2n nodes) |
+| 27 | Min Cost to Connect All Points | Medium | [LeetCode 1584](https://leetcode.com/problems/min-cost-to-connect-all-points/) | MST (Kruskal) - FREE alternative |
+| 28 | Sentence Similarity II | Medium | [LeetCode 737](https://leetcode.com/problems/sentence-similarity-ii/) or [LintCode 905](https://www.lintcode.com/problem/905/) | Transitive relation |
+| 29 | Surrounded Regions | Medium | [LeetCode 130](https://leetcode.com/problems/surrounded-regions/) | DSU alternative to DFS |
+| 30 | Graph Valid Tree | Medium | [LeetCode 261](https://leetcode.com/problems/graph-valid-tree/) or [LintCode 178](https://www.lintcode.com/problem/178/) | Cycle detection + connectivity |
