@@ -38,6 +38,7 @@
 | 27 | 01 Matrix | Medium | [LeetCode 542](https://leetcode.com/problems/01-matrix/) | Multi-source BFS | DP |
 | 28 | As Far from Land as Possible | Medium | [LeetCode 1162](https://leetcode.com/problems/as-far-from-land-as-possible/) | Multi-source BFS | DP |
 | 29 | Walls and Gates | Medium (Premium) | [LeetCode 286](https://leetcode.com/problems/walls-and-gates/) | Multi-source BFS | DP |
+| 29 | Map of Highest Peak | Medium | [LeetCode 1765](https://leetcode.com/problems/map-of-highest-peak/) | Multi-source BFS | DP |
 | 30 | Shortest Bridge | Medium | [LeetCode 934](https://leetcode.com/problems/shortest-bridge/) | DFS + BFS | - |
 | 31 | Shortest Path in Binary Matrix | Medium | [LeetCode 1091](https://leetcode.com/problems/shortest-path-in-binary-matrix/) | BFS | A* |
 | 32 | Find the Safest Path in a Grid | Medium | [LeetCode 2812](https://leetcode.com/problems/find-the-safest-path-in-a-grid/) | Binary search + multi-source BFS | Dijkstra |
@@ -65,6 +66,7 @@
 | 1 | Network Delay Time | Medium | [LeetCode 743](https://leetcode.com/problems/network-delay-time/) | Dijkstra basic | Bellman-Ford, Floyd-Warshall |
 | 2 | Path with Maximum Probability | Medium | [LeetCode 1514](https://leetcode.com/problems/path-with-maximum-probability/) | Modified Dijkstra | Bellman-Ford |
 | 3 | The Maze II | Medium (Premium) | [LeetCode 505](https://leetcode.com/problems/the-maze-ii/) | Dijkstra / BFS | - |
+| 3 | Minimum Path Cost in a Grid | Medium | [LeetCode 2304](https://leetcode.com/problems/minimum-path-cost-in-a-grid/) | Dijkstra / BFS | - |
 | 4 | Swim in Rising Water | Hard | [LeetCode 778](https://leetcode.com/problems/swim-in-rising-water/) | Dijkstra / Binary Search | DSU |
 | 5 | Path With Minimum Effort | Medium | [LeetCode 1631](https://leetcode.com/problems/path-with-minimum-effort/) | Dijkstra / Binary Search | DSU |
 | 6 | Minimum Weighted Subgraph With Required Paths | Hard | [LeetCode 2203](https://leetcode.com/problems/minimum-weighted-subgraph-with-the-required-paths/) | 3x Dijkstra | - |
@@ -111,7 +113,9 @@
 | 3 | Find Eventual Safe States | Medium | [LeetCode 802](https://leetcode.com/problems/find-eventual-safe-states/) | Reverse topo sort | DFS |
 | 4 | Minimum Height Trees | Medium | [LeetCode 310](https://leetcode.com/problems/minimum-height-trees/) | Reverse topo / Centroid | BFS from leaves |
 | 5 | Alien Dictionary | Hard (Premium) | [LeetCode 269](https://leetcode.com/problems/alien-dictionary/) | Topological sort | - |
+| 5 | Sort Items by Groups | Hard | [LeetCode 1203](https://leetcode.com/problems/sort-items-by-groups-respecting-dependencies/) | Topological sort | - |
 | 6 | Sequence Reconstruction | Medium (Premium) | [LeetCode 444](https://leetcode.com/problems/sequence-reconstruction/) | Unique topo check | - |
+| 6 | Build a Matrix With Conditions | Medium | [LeetCode 2392](https://leetcode.com/problems/build-a-matrix-with-conditions/) | Unique topo check | - |
 | 7 | All Ancestors of a Node in DAG | Medium | [LeetCode 2192](https://leetcode.com/problems/all-ancestors-of-a-node-in-a-directed-acyclic-graph/) | Topo + sets | DFS |
 | 8 | Loud and Rich | Medium | [LeetCode 851](https://leetcode.com/problems/loud-and-rich/) | DFS on DAG | Topo sort |
 | 9 | Find All Possible Recipes from Given Supplies | Medium | [LeetCode 2115](https://leetcode.com/problems/find-all-possible-recipes-from-given-supplies/) | Topo sort | - |
@@ -120,6 +124,7 @@
 | # | Problem Name | Difficulty | Link | Key Concept | Alternative Approaches |
 |---|--------------|------------|------|-------------|------------------------|
 | 11 | Parallel Courses | Medium (Premium) | [LeetCode 1136](https://leetcode.com/problems/parallel-courses/) | Topo with levels | - |
+| 11 | Find All Possible Recipes | Medium (Premium) | [LeetCode 2115](https://leetcode.com/problems/find-all-possible-recipes-from-given-supplies/) | Topo with levels | - |
 | 12 | Parallel Courses II | Hard (Premium) | [LeetCode 1494](https://leetcode.com/problems/parallel-courses-ii/) | Topo + bitmask DP | - |
 | 13 | Parallel Courses III | Hard | [LeetCode 2050](https://leetcode.com/problems/parallel-courses-iii/) | Topo + DP | - |
 | 14 | Sort Items by Groups Respecting Dependencies | Hard | [LeetCode 1203](https://leetcode.com/problems/sort-items-by-groups-respecting-dependencies/) | Nested topo sort | - |
