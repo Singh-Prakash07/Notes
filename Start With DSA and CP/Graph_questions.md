@@ -204,8 +204,8 @@
 | 6 | Detect Cycles in 2D Grid | Medium | [LeetCode 1559](https://leetcode.com/problems/detect-cycles-in-2d-grid/) | DFS cycle in grid | - |
 | 7 | Longest Cycle in a Graph | Hard | [LeetCode 2360](https://leetcode.com/problems/longest-cycle-in-a-graph/) | Functional graph | - |
 | 8 | Count Visited Nodes in a Directed Graph | Hard | [LeetCode 2876](https://leetcode.com/problems/count-visited-nodes-in-a-directed-graph/) | Functional graph | - |
-6.2 Bipartite Graphs - 7 Problems
-markdown| # | Problem Name | Difficulty | Link | Key Concept | Alternative Approaches |
+### 6.2 Bipartite Graphs - 7 Problems
+| # | Problem Name | Difficulty | Link | Key Concept | Alternative Approaches |
 |---|--------------|------------|------|-------------|------------------------|
 | 9 | Is Graph Bipartite? | Medium | [LeetCode 785](https://leetcode.com/problems/is-graph-bipartite/) | DFS 2-coloring | DSU (2n nodes) |
 | 10 | Possible Bipartition | Medium | [LeetCode 886](https://leetcode.com/problems/possible-bipartition/) | DFS 2-coloring | DSU |
