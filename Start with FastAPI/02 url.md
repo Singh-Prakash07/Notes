@@ -44,3 +44,4 @@ Used to pass data or filters to the server.
 Refers to a specific internal section of the page (an element with a specific ID).
 *   **Syntax:** Starts with `#`.
 *   **Note:** This part is **not** sent to the server; the browser uses it locally to scroll to a specific section.
+
