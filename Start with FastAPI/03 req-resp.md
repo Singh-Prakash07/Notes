@@ -8,7 +8,7 @@ In web development, the communication between a **Client** (your browser or mobi
 The client initiates the conversation by sending a request.
 
 #### 🏗️ Structure
-1.  **Request Line (Start Line):** Contains the **Method** (GET, POST, etc.), the **Path** (/items/1), and the **HTTP Version**.
+1.  **Request Line (Start Line):** Contains the **Method** (GET, POST,PUT, PATCH, DELETE etc.), the **Path** (/items/1), and the **HTTP Version**.
 2.  **Headers:** Metadata about the request (e.g., `Content-Type: application/json`, `Authorization: Bearer ...`).
 3.  **Empty Line:** A mandatory blank line separating headers from the body.
 4.  **Body (Payload):** The actual data being sent (used in POST, PUT, and PATCH).
