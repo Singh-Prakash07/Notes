@@ -60,33 +60,6 @@ You don't go into the kitchen yourself. You talk to the waiter (the API), who kn
 2020s       API-first design; OpenAPI standard; AsyncAPI
 ```
 
-### Phase 1: In-Process APIs (1940s–1960s)
-
-The very first "APIs" were subroutine libraries — collections of reusable code that programs could call. There was no network involved. Everything ran in the same process on the same machine.
-
-```asm
-; Early assembly — calling a subroutine
-CALL SQRT_ROUTINE    ; "API call" — jump to another section of code
-MOV result, AX       ; get the return value
-```
-
-No JSON. No HTTP. No network. Just function calls in memory.
-
-### Phase 2: Operating System APIs (1960s–1980s)
-
-When operating systems emerged (Unix in 1969), programs needed a standard way to ask the OS for services — opening a file, allocating memory, sending data to a printer.
-
-These became **system calls** — a controlled gateway into the kernel.
-
-```c
-// C program calling the OS API (POSIX standard)
-int fd = open("data.txt", O_RDONLY);   // ask OS to open a file
-read(fd, buffer, 1024);                 // ask OS to read bytes
-close(fd);                              // ask OS to release the file
-```
-
-The OS API is still the most fundamental API on any computer today.
-
 ### Phase 3: Network APIs and RPC (1970s–1990s)
 
 As machines got connected via networks, the need arose to call code on **remote machines**. The idea of Remote Procedure Calls (RPC) was born: make a function call that looks local but actually travels across a network.
@@ -361,7 +334,7 @@ close(fd);                               // release the resource
 
 ---
 
-### 8.3 Remote Procedure Call — RPC (1970s–90s)
+### 8.3 Remote Procedure Call — RPC (1970s–90s) important
 
 **What it is:** A way to call a function on a **different machine** as if it were a local function. The network transport is hidden from the programmer.
 
@@ -1508,7 +1481,3 @@ Most "purist REST" approach, least practical.
 ---
 
 > **Key Takeaway:** There is no single "best" API type or data format. The right choice depends on your requirements — audience (public vs internal), performance needs, team familiarity, existing infrastructure, and how the data will be used on the receiving end.
-
----
-
-*Notes compiled — covering APIs from 1940s subroutines to modern gRPC, GraphQL, and WebSockets.*
