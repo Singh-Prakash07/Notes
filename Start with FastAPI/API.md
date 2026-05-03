@@ -60,12 +60,6 @@ You don't go into the kitchen yourself. You talk to the waiter (the API), who kn
 2020s       API-first design; OpenAPI standard; AsyncAPI
 ```
 
-### Phase 3: Network APIs and RPC (1970s–1990s)
-
-As machines got connected via networks, the need arose to call code on **remote machines**. The idea of Remote Procedure Calls (RPC) was born: make a function call that looks local but actually travels across a network.
-
----
-
 ## 3. HTTP — The Foundation
 
 HTTP (HyperText Transfer Protocol) is the protocol that powers the web — and almost every modern web API.
