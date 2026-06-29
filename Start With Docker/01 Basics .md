@@ -18,6 +18,16 @@
 A container is a lightweight, standalone, executable package of software that includes everything needed 
 to run an application, including the code, a runtime, system tools, system libraries, and settings. Unlike virtual machines (VMs), containers share the host operating system's kernel, making them much more efficient and faster to start up.
 
+#### Container Vs Virtual Machines(VM)
+| Feature | Virtual Machines (VMs) | Containers |
+| :--- | :--- | :--- |
+| **Virtualization Level** | Hardware Level | Operating System Level |
+| **OS Requirement** | Full Guest OS per VM | Shares Host OS Kernel |
+| **Size** | Gigabytes (GBs) | Megabytes (MBs) |
+| **Startup Time** | Minutes | Seconds |
+| **Isolation** | Strong (Hardware-level) | Moderate (Process-level) |
+| **Primary Use Case** | Legacy apps, strong isolation | Microservices, CI/CD, cloud-native |
+
 #### Docker Engine:
 This is the core of Docker. It's a client-server application that consists of three main components:
 a Docker daemon (the server), a REST API, and a command-line interface (CLI) client.
