@@ -6,6 +6,13 @@
 > 
 > Linux containers run on Windows by executing inside a lightweight Linux virtual machine, typically powered by WSL 2 or Hyper-V.  Because containers share the host kernel and Windows uses a different kernel than Linux, Docker cannot run Linux containers natively on the Windows host. 
 
+| Scenario | Host OS | Container Type | Requirement |
+| :--- | :--- | :--- | :--- |
+| **Standard** | Windows | Linux | Linux VM (WSL 2 / Hyper-V) |
+| **Standard** | Linux | Windows | **Windows VM** (KVM / VirtualBox) |
+| **Native** | Linux | Linux | None (Direct Kernel Sharing) |
+| **Native** | Windows | Windows | None (Direct Kernel Sharing) |
+
 ### Key Concepts
 #### Containers: 
 A container is a lightweight, standalone, executable package of software that includes everything needed 
