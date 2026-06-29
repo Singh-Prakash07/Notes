@@ -1,6 +1,10 @@
 ### Docker
 + Docker is a platform that uses OS-level virtualization to deliver software in packages called containers.
-+ It's an open-source tool that simplifies the process of building, shipping, and running applications. 
++ It's an open-source tool that simplifies the process of building, shipping, and running applications.
+[!NOTE]
+> Docker can run on any distro of OS as long as OS kernel is same (means if a container is created on ubuntu and since OS kernel is linux, this container can run on all different flavour OS like Fedora, openSUSE, almaLinux, Kali, etc.
+> 
+> Linux containers run on Windows by executing inside a lightweight Linux virtual machine, typically powered by WSL 2 or Hyper-V.  Because containers share the host kernel and Windows uses a different kernel than Linux, Docker cannot run Linux containers natively on the Windows host. 
 
 ### Key Concepts
 #### Containers: 
