@@ -18,7 +18,8 @@ dockerimage ls
 OR
 docker images // list all images with (REPOSITORY name, TAG, IMAGE ID, CREATED, SIZE)
 ```
-6. To remove an image we first need to delete all its container.
+9. To remove an image we first need to delete all its container.
+10. `docker system prune` this removes all stopped containers, all networks not used by at least one container, all dangling imgaes, unused build cache.
 
 ## Container
 ### To find the Container ID or Name
