@@ -7,9 +7,10 @@
 
 -t (TTY): This allocates a "pseudo-TTY" (a fake terminal). This is what formats the output, gives you a nice command prompt (like root@container_id:/#), allows you to use the arrow keys to see history, and colors your text.
 ```
-3.  If we not use it. it will create container but we can't use cli of that enviroment.
-4.  Whenever we run an image it always create a new container.
-5.  how to find images
+3.  Without -i, you can't type. Without -t, the output looks like a garbled, unformatted text stream. Together (-it), they give you a perfect, normal terminal experience.
+4.  If you run docker run ubuntu without those flags, the container will start and then immediately crash/exit.
+5.  Whenever we run an image it always create a new container.
+6.  how to find images
 ```
 dockerimage ls
 OR
