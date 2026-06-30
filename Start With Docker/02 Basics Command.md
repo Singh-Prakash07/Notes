@@ -1,6 +1,6 @@
 ## Image
 ### Run an image
-1.`docker ps` to list all running containers, `docker ps -a` to get all container running or not. we use `docker pull ubuntu` to just download the image.
+1. `docker ps` to list all running containers, `docker ps -a` to get all container running or not. we use `docker pull ubuntu` to just download the image.
 2. `docker run -it ubuntu` first it search the image locally, if not found download from docker hub. then run it.
 3.  To keep the bash process alive so you can actually use the container, you have to attach your keyboard and screen to it. That is what -it does. It is actually two separate flags combined:
 ```
