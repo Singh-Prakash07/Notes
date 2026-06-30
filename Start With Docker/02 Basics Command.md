@@ -10,9 +10,7 @@
 ```
 4.  Without -i, you can't type. Without -t, the output looks like a garbled, unformatted text stream. Together (-it), they give you a perfect, normal terminal experience.
 5.  If you run docker run ubuntu without those flags, the container will start and then immediately crash/exit.
-6.  when you are running a background service (like a web server or a database) use -d (Detached mode).`docker run -d nginx`.
-
-Instead of -it, you use -d (Detached mode).
+6.  when you are running a background service (like a web server or a database) use -d (Detached mode).`docker run -d nginx`. Instead of -it, you use -d (Detached mode). in detach mode container run in background and your terminal is free to use, you can later attach using command `
 7.  Whenever we run an image it always create a new container.
 8.  how to find images
 ```
