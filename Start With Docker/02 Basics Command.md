@@ -1,7 +1,12 @@
 ## Image
 ### Run an image
 1. `docker run -it ubuntu` first it search the image locally, if not found download from docker hub. then run it.
-2.  here it means in itractive mode, means we will be container enviroment.
+2.  To keep the bash process alive so you can actually use the container, you have to attach your keyboard and screen to it. That is what -it does. It is actually two separate flags combined:
+```
+-i (Interactive): This tells Docker to keep the Standard Input (STDIN) open. It essentially wires your physical keyboard into the container's process so you can send it commands.
+
+-t (TTY): This allocates a "pseudo-TTY" (a fake terminal). This is what formats the output, gives you a nice command prompt (like root@container_id:/#), allows you to use the arrow keys to see history, and colors your text.
+```
 3.  If we not use it. it will create container but we can't use cli of that enviroment.
 4.  Whenever we run an image it always create a new container.
 5.  how to find images
