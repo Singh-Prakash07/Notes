@@ -8,13 +8,13 @@
 
 -t (TTY): This allocates a "pseudo-TTY" (a fake terminal). This is what formats the output, gives you a nice command prompt (like root@container_id:/#), allows you to use the arrow keys to see history, and colors your text.
 ```
-3.  Without -i, you can't type. Without -t, the output looks like a garbled, unformatted text stream. Together (-it), they give you a perfect, normal terminal experience.
-4.  If you run docker run ubuntu without those flags, the container will start and then immediately crash/exit.
-5.  when you are running a background service (like a web server or a database) use -d (Detached mode).`docker run -d nginx`.
+4.  Without -i, you can't type. Without -t, the output looks like a garbled, unformatted text stream. Together (-it), they give you a perfect, normal terminal experience.
+5.  If you run docker run ubuntu without those flags, the container will start and then immediately crash/exit.
+6.  when you are running a background service (like a web server or a database) use -d (Detached mode).`docker run -d nginx`.
 
 Instead of -it, you use -d (Detached mode).
-6.  Whenever we run an image it always create a new container.
-7.  how to find images
+7.  Whenever we run an image it always create a new container.
+8.  how to find images
 ```
 dockerimage ls
 OR
