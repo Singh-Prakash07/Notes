@@ -1,9 +1,9 @@
 ### Port Mapping
 + Port mapping is the process of linking a port on the host machine to a port inside a Docker container.
 + This allows external traffic to reach a service running inside the container.
-+ No, you cannot run an existing container in interactive mode with port mapping.
++ We cannot run an existing container in interactive mode with port mapping.
 ### How Port Mapping Works
-+ By default, services running inside a container are isolated from the host machine's network. You can't access a web server running on port 80 inside a container just by navigating to localhost:80 on your host. Port mapping, also known as port publishing, creates a tunnel that redirects network traffic from a specified port on the host to a specific port in the container.
++ By default, services running inside a container are isolated from the host machine's network. we can't access a web server running on port 80 inside a container just by navigating to localhost:80 on your host. Port mapping, also known as port publishing, creates a tunnel that redirects network traffic from a specified port on the host to a specific port in the container.
 ### Syntax and Example
 + You define port mapping using the -p or --publish flag with the docker run command.
 + Syntax: docker run -p <host_port>:<container_port> <image_name>
