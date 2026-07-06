@@ -14,7 +14,8 @@
      + -t yourusername/python_with_uv:3.12-slim: Names the image and gives it a clear version tag (3.12-slim).
      + .: Sets the current directory as the build context.
   3. Now that the image is built and tagged correctly, push it to the cloud using `docker push yourusername/python_with_uv:3.12-slim`
-  4. # Start directly from your newly created cloud image!
+  4. if we have created an application and want to create an image of our project using this image
+  5. Start directly from your newly created cloud image!
 ```
 # Start directly from your newly created cloud image!
 FROM yourusername/python_with_uv:3.12-slim
