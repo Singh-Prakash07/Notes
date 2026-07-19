@@ -4,6 +4,7 @@
 + Phase 4 (Days 46-60): Speed Drills & Full-Section Mocks
 
 ### Subject-Verb Agreement
++ If the subject is singular, the verb must be singular. If the subject is plural, the verb must be plural, but sometimes the true subject hide behind filler phrases to trick you.
 1. The "Accompaniment" Trap
    + When subjects are joined by phrases like as well as, along with, together with, in addition to, or besides, the verb always agrees with the first subject. The rest is just a modifier
 ```
