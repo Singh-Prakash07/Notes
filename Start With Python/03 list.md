@@ -35,7 +35,14 @@ print(colors[1:4])   # ['green', 'blue', 'yellow']
 print(colors[:3])    # ['red', 'green', 'blue']
 print(colors[::2])   # ['red', 'blue', 'purple'] (Every second item)
 ```
-#### 3. Modifying a ListBecause lists are mutable, you can change them directly.ActionMethod/SyntaxExampleChange Itemlist[index] = new_valitems[0] = "New"Add to End.append(val)items.append("extra")Insert at Index.insert(index, val)items.insert(1, "middle")Combine Lists.extend(list2) or +list1.extend(list2)Remove by Value.remove(val)items.remove("apple")Remove by Index.pop(index)items.pop(2) (returns the item)Delete Indexdel list[index]del items[0]Clear All.clear()items.clear()4. Useful Built-in FunctionsThese functions work on the list as a whole:len(list): Returns the number of items.max(list) / min(list): Returns the largest or smallest value.sum(list): Adds up all numerical elements.sorted(list): Returns a new sorted list without changing the original.5. List ComprehensionThis is a "Pythonic" way to create new lists from existing iterables in a single line.Syntax: [expression for item in iterable if condition]Python# Create a list of squares for even numbers only
+#### 3. Modifying a ListBecause lists are mutable, you can change them directly.
+Action Method/Syntax Example Change Itemlist[index] = new_valitems[0] = "New"Add to End.append(val)items.append("extra")
++ Insert at Index.insert(index, val)items.insert(1, "middle")Combine Lists.extend(list2) or list1.extend(list2)Remove by Value.
++ remove(val)items.remove("apple")Remove by Index.pop(index)items.pop(2) (returns the item)Delete Indexdel list[index]del items[0]Clear All.
++ clear()items.clear()4. Useful Built-in FunctionsThese functions work on the list as a whole:len(list): Returns the number of items.
++ max(list) / min(list): Returns the largest or smallest value.sum(list): Adds up all numerical elements.
++ sorted(list): Returns a new sorted list without changing the original.
++ 5. List ComprehensionThis is a "Pythonic" way to create new lists from existing iterables in a single line.Syntax: [expression for item in iterable if condition]Python# Create a list of squares for even numbers only
 numbers = [1, 2, 3, 4, 5, 6]
 squares = [x**2 for x in numbers if x % 2 == 0]
 
