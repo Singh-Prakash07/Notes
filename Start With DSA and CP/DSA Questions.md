@@ -225,6 +225,8 @@
 | 4 | Continuous Subarray Sum | Medium | [LC 523](https://leetcode.com/problems/continuous-subarray-sum/) | Find subarray sum divisible by k (modular arithmetic) |
 | 5 | Subarray Sum Equals K | Medium | [LC 560](https://leetcode.com/problems/subarray-sum-equals-k/) | HashMap of prefix sums; count prefix[j] = prefix[i] - k |
 | 6 | Contiguous Array | Medium | [LC 525](https://leetcode.com/problems/contiguous-array/) | Treat 0 as -1; find subarray sum = 0 |
+| 7 | Binary Subarrays | Medium | [LC 930](https://leetcode.com/problems/binary-subarrays-with-sum/) | Treat 0 as -1; find subarray sum = 0 |
+
 
 ### 4.2 2D Prefix Sum
 
