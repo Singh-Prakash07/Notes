@@ -1,16 +1,6 @@
-# 🧠 DYNAMIC PROGRAMMING — Complete Problem Sheet (Reorganized by Technique)
+## DYNAMIC PROGRAMMING — Complete Problem Sheet (Reorganized by Technique)
 > Every subsection = one specific technique/variation. ~230 Problems. LeetCode + GFG.
-
 ---
-
-## HOW TO READ THIS SHEET
-- Each **subsection** = one **distinct DP technique**. Finishing a subsection = you've mastered that specific variation.
-- The `> Core idea:` block tells you the **exact mechanism** before you solve — so you know what you're learning, not just "it's DP."
-- Problems appearing in multiple categories are placed in their **primary** technique section; secondary technique is noted in "Alternative."
-- Subsections with 2–3 problems are intentional — those are rare but critical patterns.
-
----
-
 ## 1. 1D LINEAR DP
 
 ### 1.1 Fibonacci Recurrence — Direct State
