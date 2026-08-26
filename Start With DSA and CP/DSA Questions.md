@@ -1,4 +1,4 @@
-# 🎯 COMPLETE PROBLEM SHEET — Binary Search, Sliding Window, Two Pointers, and Beyond
+# COMPLETE PROBLEM SHEET — Binary Search, Sliding Window, Two Pointers, and Beyond
 > Master 20+ fundamental algorithms & techniques. ~250 Problems. LeetCode + GFG.
 > **Excludes:** DP (separate sheet), Graph algorithms (separate sheet).
 > **Includes:** Everything else you need to crack interviews.
