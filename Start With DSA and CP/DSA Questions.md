@@ -213,6 +213,9 @@
 
 > **Core idea:** Precompute cumulative sums. Query sum(l, r) in O(1) instead of O(r-l).
 > `prefix[i] = sum(nums[0..i-1]); sum(l, r) = prefix[r+1] - prefix[l]`
+> for mostly two type of questions are there
+> longest subarray(use hashmap with index/length
+> number of subarray meeting the criteria. (choose hasmap with freq sum/xor/etc and initially 0: 1).
 
 | # | Problem | Difficulty | Link | Key Concept |
 |---|---------|------------|------|-------------|
