@@ -193,6 +193,7 @@
 | 18 | Find the Celebrity | Medium | [LC 277](https://leetcode.com/problems/find-the-celebrity/) | Pair-wise comparison; find person known by all |
 | 19 | Substring with Concatenation of All Words | Hard | [LC 30](https://leetcode.com/problems/substring-with-concatenation-of-all-words/) | Window of fixed words length; match all words |
 | 20 | Longest Substring with Distinct Characters | Medium | [GFG](https://www.geeksforgeeks.org/longest-substring-without-repeating-characters/) | HashMap + two pointers |
+| 21 | Subarray Sums Divisible by K | Easy | [LC 974](https://leetcode.com/problems/subarray-sums-divisible-by-k/) | store modulo sum |
 
 ### 3.4 Monotonic Deque (Sliding Window Min/Max)
 
