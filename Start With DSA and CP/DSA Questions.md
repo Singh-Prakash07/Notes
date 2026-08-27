@@ -260,6 +260,8 @@
 | 13 | Contiguous Array (0s and 1s) | Medium | [LC 525](https://leetcode.com/problems/contiguous-array/) | Treat 0→-1; find sum = 0 |
 | 14 | Maximum Size Subarray Sum Equals K | Medium | [LC 325](https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/) | Longest subarray with sum = k |
 | 15 | Find Pivot Index | Easy | [LC 724](https://leetcode.com/problems/find-pivot-index/) | left_sum == right_sum at index |
+| 16 | Count Nice Subarrays | Easy | [LC 1248](https://leetcode.com/problems/count-number-of-nice-subarrays/) | store number of occurrance |
+| 17 | Subarray Sums Divisible by K | Easy | [LC 974](https://leetcode.com/problems/subarray-sums-divisible-by-k/) | store modulo sum |
 
 ---
 
