@@ -1,4 +1,4 @@
-
+## 1. TCP Connection
 ### 3-way handShake
 + The TCP 3-Way Handshake is the foundational mechanism that establishes a reliable, full-duplex connection between a
   client and a server before any actual application data (like an HTTP, websocket request) is sent.
@@ -27,3 +27,36 @@
 > The first two steps (SYN, SYN-ACK) only prove that the client can send and the server can receive. The server still needs proof that its outgoing messages are actually reaching the client. That third step—the final ACK from the client—is the only way the server knows its return path is functioning. Without it, you only have a one-way connection."
 
 + It allows the client and server to synchronize their starting sequence numbers and allocate necessary memory buffers before a single byte of actual application data is transmitted.
+
+## TCP Teardown
+  + Just like the 3-Way Handshake opens a connection, the TCP 4-Way Teardown closes it.
+
+  + Here is the play-by-play of how it works, assuming the Client initiates the disconnect.
+### TCP 4-Way Teardown (FIN, ACK)
+1. FIN (Finish): Client initiates the close
+  + **The Action**: The client decides it has sent all its data and sends a packet with the FIN flag active.
+  + **The Translation**: "Server, I have no more data to send to you. I am closing my outbound channel."
+  + **The State**: The client enters the FIN-WAIT-1 state. Crucially, the client can no longer send data, but it can     still receive data.
+
+2. ACK (Acknowledge): Server confirms the Client's close
+  + **The Action**: The server receives the FIN packet and immediately replies with an ACK.
+  + **The Translation**: "Understood, Client. I acknowledge your outbound channel is closed."
+  + **The State (The "Half-Closed" phase)**: The client enters FIN-WAIT-2. The server can now finish sending any         remaining data it was processing. The connection is "half-closed."
+
+3. FIN (Finish): Server initiates its own close
+  + **The Action**: Once the server is completely done transmitting its final pieces of data, it sends its own FIN     packet to the client.
+  + **The Translation**: "Client, I am also completely done sending data. I am closing my outbound channel."
+
+4. ACK (Acknowledge): Client confirms the Server's close
+  + **The Action**: The client receives the server's FIN and sends a final ACK in response.
+  + **The Translation**: "Understood, Server. Both channels are closed. Goodbye."
+
+ + The "Gotcha" Interview Concept: The TIME_WAIT State: "After the client sends that final ACK in Step 4, can it immediately destroy the socket and free up its memory?"
+
++ No. After sending the final ACK, the client enters a state called TIME_WAIT and waits for a specific duration         (usually twice the Maximum Segment Lifetime, or 2MSL—typically 1 to 4 minutes).
+  +It does this for two reasons:
+1. To handle a lost ACK: If that final ACK gets lost in transit, the server will assume its FIN was dropped and will re-transmit the FIN. The client must stay alive in TIME_WAIT so it can re-send the final ACK.
+2. To prevent ghost packets: It ensures that any delayed packets from this old connection fully die out on the network before that specific port combination is reused for a brand-new connection."
+
+Your Interview Summary Line
+"The TCP 4-Way Teardown safely closes a full-duplex connection by shutting down each direction independently. It uses a FIN/ACK pair from the initiator, followed by a FIN/ACK pair from the receiver once all remaining data is flushed, ending in a TIME_WAIT state to ensure the final acknowledgment wasn't lost."
