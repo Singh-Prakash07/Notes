@@ -58,5 +58,4 @@
 1. To handle a lost ACK: If that final ACK gets lost in transit, the server will assume its FIN was dropped and will re-transmit the FIN. The client must stay alive in TIME_WAIT so it can re-send the final ACK.
 2. To prevent ghost packets: It ensures that any delayed packets from this old connection fully die out on the network before that specific port combination is reused for a brand-new connection."
 
-Your Interview Summary Line
-"The TCP 4-Way Teardown safely closes a full-duplex connection by shutting down each direction independently. It uses a FIN/ACK pair from the initiator, followed by a FIN/ACK pair from the receiver once all remaining data is flushed, ending in a TIME_WAIT state to ensure the final acknowledgment wasn't lost."
++ "The TCP 4-Way Teardown safely closes a full-duplex connection by shutting down each direction independently. It uses a FIN/ACK pair from the initiator, followed by a FIN/ACK pair from the receiver once all remaining data is flushed, ending in a TIME_WAIT state to ensure the final acknowledgment wasn't lost."
