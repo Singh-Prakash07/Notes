@@ -1,5 +1,6 @@
 https://github.com/taogen-docs/resources-of-learning/blob/master/_cs-advanced-domains-resources.md
 
+```
 class Solution:
     def maximumScore(self, nums: list[int], k: int) -> int:
         n = len(nums)
@@ -28,3 +29,4 @@ class Solution:
         return ans
 
         
+```
