@@ -1,3 +1,4 @@
+```
 s = input()
 arr=[]
 check = "hello"
@@ -13,3 +14,5 @@ if "".join(arr) == check:
   print("YES")
 else:
   print("NO")
+
+```
